@@ -1,0 +1,7 @@
+.walletCardsContainer{
+    display: flex;
+}
+
+.leftSection{
+    margin-top: 2.375rem;
+}

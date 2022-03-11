@@ -1,0 +1,68 @@
+.referAFriendContainer{
+    background-color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 1rem;
+    overflow: auto;
+    height: 10.625rem;
+    margin-top: 3.5rem;
+}
+
+.refer{
+    max-width: 8.8125rem;
+    height: 1.3125rem;
+    margin-left: 5.6875rem;
+    font-family: Roboto;
+    font-weight: bold;
+    font-size: 1.125rem;
+    margin-top: 1.75rem;
+    color: #8A8A8A;
+}
+
+.code {
+    max-width: 100%;
+    overflow: auto;
+}
+
+.coupon{
+    background-color: #FFFFFF;
+    border: .125rem dashed #C4C4C4;
+    border-radius: .3125rem;
+    width: 38.0625rem;
+    height: 4.375rem;
+    margin-left: 5.1875rem;
+    margin-top: 0.8125rem;
+    display: inline-block;
+}
+
+.couponText{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.5rem;
+    color: #2FA83B;
+    margin: 18px 0px 19px 28px ;
+}
+
+.referFriend{
+    background-color: #FE8276;
+    box-sizing: border-box;
+    border-radius: 5px;
+    display: inline-block;
+    height: 65px;
+    margin-right: 37px;
+    width: 277px;
+}
+
+.referText{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    text-align: center;
+    margin-top: 19px;
+    margin-bottom: 18px;
+    margin-left: 79px;
+    margin-right: 45px;
+    color: #FFFFFF;
+    display: inline-block;
+}

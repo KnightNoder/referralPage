@@ -1,0 +1,14 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.referImageCard{
+    max-width: 508px;
+    height: 445px;
+    background-color: #FFF5EF;
+    border-radius: 16px;
+    margin-top: 30px;
+    margin-left: 100px;
+}

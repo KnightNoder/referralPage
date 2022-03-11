@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: white;
+}
+
+.container{
+    overflow: auto;
+}
+
+.border-bottom{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 14px;
+    color: #000000;
+    max-width: 345px;
+    height: 14px;
+    margin-top: 20px;
+    margin-left: 100px;
+    border: solid 1px
+}
+
+.fire{
+    background: radial-gradient(116.42% 94.66% at 53.4% 10.35%,
+    #FFF176 21.4%, #FFF27D 32.8%,
+    #FFF48F 48.7%, #FFF7AD 67.2%,
+    #FFF9C4 79.3%, 
+    rgba(255, 248, 189, 0.804) 82.2%, 
+    rgba(255, 246, 171, 0.529) 86.3%,
+    rgba(255, 243, 141, 0.209) 91%, 
+    rgba(255, 241, 118, 0) 94.1%)
+    }

@@ -1,11 +1,18 @@
 .walletCardsContainer {
   display: flex;
   margin-top: 2.375rem;
-  height: 32.75rem;
 }
 
 .walletCardImage {
   flex: 1;
-  width: 100%;
   height: 100%;
+  margin-right: 0.5rem;
+}
+
+.coinBalanceCardContainer {
+  background: linear-gradient(131.46deg, #c9e5fd 1.47%, #def0ff 103.63%);
+  border-radius: 1rem;
+  overflow: auto;
+  flex: 1;
+  margin-left: 0.5rem;
 }

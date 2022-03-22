@@ -10,7 +10,9 @@ export default function WalletCards() {
             <div className='walletCardsContainer'>
                 <img src={pic} className="walletCardImage" alt="" />
                 {/* <div className='walletRightSection'> */}
-                <CoinBalanceCard />
+                <div className='coinBalanceCardContainer'>
+                    <CoinBalanceCard /> 
+                </div>
                 {/* <CoinBalanceCard /> */}
                 {/* </div> */}
                 {/* <Helmet>

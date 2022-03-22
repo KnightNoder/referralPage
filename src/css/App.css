@@ -43,15 +43,10 @@
 
   .walletCardsContainer {
     flex-direction: column-reverse;
-    height: 450px;
+    display: flex;
   }
 
   .walletCardImage,
   .coinBalanceCardContainer {
-    flex: 1;
-  }
-
-  .coinBalanceCardContainer {
-    margin-top: 10px;
   }
 }

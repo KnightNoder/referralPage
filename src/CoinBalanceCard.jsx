@@ -34,58 +34,56 @@ export default function CoinBalanceCard() {
     }
     return (
         <>
-            <div className='coinBalanceCardContainer'>
-                <div className="coinBalanceCard">
-                    <img src={pic} className="coinPic" alt="" />
-                    <div >
-                        <div className='headerCard'>
-                            Coin Balance
-                        </div>
-                        <div className='coinBalance'>
-                            1000
-                        </div>
+            <div className="coinBalanceCard">
+                <img src={pic} className="coinPic" alt="" />
+                <div >
+                    <div className='headerCard'>
+                        Coin Balance
+                    </div>
+                    <div className='coinBalance'>
+                        1000
+                    </div>
 
+                </div>
+            </div>
+            <span className='earnings'>Lifetime earnings:</span><span className="amount">&#8377;1000.00</span>
+            <div style={{ margin: "1.875rem 2.4375rem 0 2.5rem" }}>
+                <button id='redeemBtn' onClick={window.outerWidth > 480 ? openModal : (() => setOpen(true))} className='redeem' type="button">
+                    {/* () => setOpen(true) */}
+                    Redeem Now
+                </button>
+                <BottomSheet open={open} onDismiss={onDismiss}>
+                    <RedeemPopup />
+                </BottomSheet>
+                <Modal
+                    isOpen={modalIsOpen}
+                    onRequestClose={closeModal}
+                    contentLabel="Example Modal"
+                    style={customStyles}
+                    // className='desktopPopup'
+                    ariaHideApp={false}
+                >
+                    <RedeemPopup />
+                </Modal>
+            </div>
+            {/* <div id="myModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <p>Some text in the Modal..</p>
                     </div>
+                </div> */}
+            <div className="dash">
+            </div>
+            <div className="coinsOnWayFlex">
+                <img src={giftPic} className="giftPic" alt=""  />
+                <div className='coinsOnWay'>
+                    <span className="onWayCoinsNumber">200</span> coins are on the way
                 </div>
-                <span className='earnings'>Lifetime earnings:</span><span className="amount">&#8377;1000.00</span>
-                <div style={{ margin: "1.875rem 2.4375rem 0 2.5rem" }}>
-                    <button id='redeemBtn' onClick={window.outerWidth > 480 ? openModal : (() => setOpen(true))} className='redeem' type="button">
-                        {/* () => setOpen(true) */}
-                        Redeem Now
-                    </button>
-                    <BottomSheet open={open} onDismiss={onDismiss}>
-                        <RedeemPopup />
-                    </BottomSheet>
-                    <Modal
-                        isOpen={modalIsOpen}
-                        onRequestClose={closeModal}
-                        contentLabel="Example Modal"
-                        style={customStyles}
-                        // className='desktopPopup'
-                        ariaHideApp={false}
-                    >
-                        <RedeemPopup />
-                    </Modal>
-                </div>
-                {/* <div id="myModal" class="modal">
-                        <div class="modal-content">
-                            <span class="close">&times;</span>
-                            <p>Some text in the Modal..</p>
-                        </div>
-                    </div> */}
-                <div className="dash">
-                </div>
-                <div className="coinsOnWayFlex">
-                    <img src={giftPic} className="giftPic" alt=""  />
-                    <div className='coinsOnWay'>
-                        <span className="onWayCoinsNumber">200</span> coins are on the way
-                    </div>
-                </div>
-                <div className="savedMoneyCard">
-                    <img src={discountIcon} className='discountPic' alt="" />
-                    <div className='savedMoney'>
-                        You have saved &nbsp; <span className="onWayCoinsPriceNumber green"> &#8377;1000.00 </span> &nbsp; so far
-                    </div>
+            </div>
+            <div className="savedMoneyCard">
+                <img src={discountIcon} className='discountPic' alt="" />
+                <div className='savedMoney'>
+                    You have saved &nbsp; <span className="onWayCoinsPriceNumber green"> &#8377;1000.00 </span> &nbsp; so far
                 </div>
             </div>
         </>

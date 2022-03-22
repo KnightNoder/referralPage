@@ -1,0 +1,57 @@
+.orderCardContainer{
+    display: flex;
+    border-bottom: 2px solid #EBEBEB;
+}
+
+.fire {
+    margin-top: 1.375rem;
+    margin-left: 1.25rem;
+    width: 1.875rem;
+    height: 1.875rem;
+}
+
+.calender{
+    margin-top: 1.5rem;
+    margin-left: 1.4375rem;
+    height: .9375rem;
+    width: .9375rem;
+}
+
+.coin {
+    width: 5.5rem;
+    height: 2.375rem;
+    background: #FCF0D2;
+    border-radius: 4px;
+    margin-left: 1rem;
+    margin-top: .75rem;
+    margin-bottom: 1.375rem;
+}
+
+.historyContent{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.125rem;
+    line-height: .875rem;
+    color: #000000;
+    margin-top: 1.5rem;
+    margin-left: 1.4375rem;
+}
+
+.historyContentCard{
+}
+
+.historyDate{
+    margin-top: 1.4rem;
+    margin-left: .78125rem;
+    margin-bottom: 0;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.125rem;
+    line-height: 1.3125rem;
+    color: #726868;
+    height: 1.3125rem;
+}
+
+.historyInfo{
+    display: flex;
+}

@@ -1,17 +1,57 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Roboto';
-  font-size: 1rem;
+  font-family: "Roboto";
 }
 
-html {
-  font-size: 16px;
-}
-
-.mainContainer{
+.mainContainer {
   margin-top: 68px;
+  margin-left: 25rem;
+  margin-right: 25rem;
+}
+
+@media only screen and (max-width: 1200px) {
+  html {
+    font-size: 13px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  html {
+    font-size: 8px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  html {
+    font-size: 7px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  html {
+    font-size: 5px;
+  }
+
+  .mainContainer {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+
+  .walletCardsContainer {
+    flex-direction: column-reverse;
+    height: 450px;
+  }
+
+  .walletCardImage,
+  .coinBalanceCardContainer {
+    flex: 1;
+  }
+
+  .coinBalanceCardContainer {
+    margin-top: 10px;
+  }
 }

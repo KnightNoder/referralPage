@@ -1,16 +1,23 @@
-import './css/WalletCards.css'
+import './css/walletCards.css'
 import WalletImageCard from './WalletImageCard'
+import CoinBalanceCard from './CoinBalanceCard'
+import pic from "./images/WalletCardImage.jpg"
+// import { Helmet } from "react-helmet";
 
 export default function WalletCards() {
     return (
         <>
             <div className='walletCardsContainer'>
-                <div className='leftSection'>
-                    <WalletImageCard />
-                </div>
-                <div>
-
-                </div>
+                <img src={pic} className="walletCardImage" alt="" />
+                {/* <div className='walletRightSection'> */}
+                <CoinBalanceCard />
+                {/* <CoinBalanceCard /> */}
+                {/* </div> */}
+                {/* <Helmet>
+                    <script src="../scripts/coinBalanceCard.js"
+                        type="text/javascript" />
+                </Helmet> */}
+                {/* <WalletImageCard /> */}
             </div>
         </>
     )

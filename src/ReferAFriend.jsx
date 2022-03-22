@@ -1,4 +1,5 @@
-import './css/component2.css'
+import './css/referAFriend.css'
+// import pic from './images/share.jpg'
 export default function ReferAFriend() {
     return (
         <>
@@ -8,14 +9,19 @@ export default function ReferAFriend() {
                 </div>
                 <div className="code">
                     <div className="coupon">
-                        <p className="couponText">
+                        <div className="couponText">
                             USERNAME1938
-                        </p>
+                        </div>
+                        {/* <button className='copyCoupon' type='button'>
+                            <p className='copyCouponText'>
+                                Copy
+                            </p>
+                        </button> */}
                     </div>
                     <div className="referFriend">
-                        <p className="referText">
+                        <div className="referText">
                             Refer a friend
-                        </p>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -13,13 +13,13 @@
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
-    font-size: 18px;
-    line-height: 14px;
+    font-size: 1.125rem;
+    line-height: .875rem;
     color: #000000;
-    max-width: 345px;
-    height: 14px;
-    margin-top: 20px;
-    margin-left: 100px;
+    max-width: 21.5625rem;
+    height: .875rem;
+    margin-top: 1.25rem;
+    margin-left: 6.25rem;
     border: solid 1px
 }
 

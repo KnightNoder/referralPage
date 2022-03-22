@@ -1,11 +1,10 @@
 .referContainer {
     background-color: #FFF5EF;
-    border-radius: 16px;
+    border-radius: 2rem;
     overflow: auto;
 }
 
 .topDivHeading{
-    font-family: Roboto;
     font-size: 2.25rem;
     font-style: normal;
     font-weight: 700;
@@ -13,10 +12,10 @@
     margin-left: 3.3125rem;
     height: 2.625rem;
     color: #223263;
+    max-width: 14.9375rem;
 }
 
 .bottomDivHeading{
-    font-family: Roboto;
     font-style: normal;
     font-weight: normal;
     font-size: 1.5rem;

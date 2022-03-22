@@ -40,18 +40,18 @@ export default function App() {
   return (
     <>
       <HeaderAndMenu />
-      {/* <Container fixed className='mainContainer'>
+      <Container fixed className='mainContainer'>
         <ReferAndEarn />
         <ReferAFriend />
         <WalletCards />
         <HowItWorksCards />
-      </Container> */}
-      <div className='mainContainer'>
+      </Container>
+      {/* <div className='mainContainer'>
         <ReferAndEarn />
         <ReferAFriend />
         <WalletCards />
         <HowItWorksCards />
-      </div>
+      </div> */}
       {/* <div>
         <button onClick={openModal}>Open Modal</button>
         <Modal

@@ -106,7 +106,12 @@
     display: block;
     margin-bottom: 0;
   }
-  /* .referAFriendContainer {
+
+  .referAFriendContainer {
     box-shadow: none;
-  } */
+  }
+
+  .rupee {
+    display: none;
+  }
 }

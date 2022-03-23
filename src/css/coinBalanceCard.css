@@ -5,6 +5,7 @@
   margin: 1.875rem 2.4375rem 0 2.5rem;
   display: flex;
   max-width: 100%;
+  /* border: solid 1px; */
 }
 
 .earnings {
@@ -185,17 +186,6 @@
   margin-left: 1.3125rem;
 }
 
-.coinBalance {
-  font-style: normal;
-  font-weight: 700;
-  font-size: 1.75rem;
-  line-height: 2.0625rem;
-  letter-spacing: 0.0025em;
-  color: #fefefe;
-  margin-top: 0.6875rem;
-  margin-left: 1.3125rem;
-}
-
 .desktopPopup {
   background: #ffffff;
   border-radius: 16px;
@@ -207,9 +197,9 @@
   transform: translate(-50%, -50%);
 }
 /* @media (max-width: 1200px) {
-    .walletRightSection{
-        height: 700px;
-    }
+  .walletRightSection{
+    height: 700px;
+  }
 } */
 .desktopModal {
   position: absolute;
@@ -269,4 +259,18 @@
   color: #000000;
   margin-right: 2.435rem;
   cursor: pointer;
+}
+
+.coinBalance {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.75rem;
+  line-height: 2.0625rem;
+  letter-spacing: 0.0025em;
+  color: #fefefe;
+  margin-top: 0.6875rem;
+  margin-left: 1.3125rem;
+}
+
+.coinBalanceRightSection {
 }

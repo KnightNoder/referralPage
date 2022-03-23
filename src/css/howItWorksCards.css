@@ -1,13 +1,5 @@
-.howItWorksSectionCard{
-    display: flex;
-    margin-top: 1.25rem;
-    margin-bottom: 3.125rem;
-}
-
-@media (max-width: 480px) {
-
-    .howItWorksSectionCard {
-        flex-direction: column;
-        height: 400px;
-    }
+.howItWorksSectionCard {
+  display: flex;
+  margin-top: 1.25rem;
+  margin-bottom: 3.125rem;
 }

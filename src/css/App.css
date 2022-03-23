@@ -76,4 +76,32 @@
   .headerCard {
     display: none;
   }
+  .coinBalance {
+    margin-top: 12px;
+    margin-left: 100px;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-left: 100px;
+    display: inline-block;
+  }
+
+  .coinBalanceRightSection {
+    width: 100%;
+  }
+  .referContainer {
+    padding-bottom: 20px;
+  }
+
+  .howItWorksImageContainer {
+    box-shadow: none;
+    height: 300px;
+  }
+
+  .howItWorksSectionCard {
+    display: block;
+    margin-bottom: 0;
+  }
+  /* .referAFriendContainer {
+    box-shadow: none;
+  } */
 }

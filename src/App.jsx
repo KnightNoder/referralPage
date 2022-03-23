@@ -15,11 +15,13 @@ export default function App() {
     const screenWidth = window.innerWidth;
     setScreenSize(screenWidth);
   })
+
+  const marginTopVal = screenSize > 480 ? "70px" : "20px"
   return (
     <>
       <HeaderAndMenu />
       <screenSizeContext.Provider value={screenSize}>
-        <Container fixed className='mainContainer'>
+        <Container fixed className='mainContainer' style={{marginTop:marginTopVal} }>
           <ReferAndEarn />
           <ReferAFriend />
           <WalletCards />

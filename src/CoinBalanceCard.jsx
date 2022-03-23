@@ -46,12 +46,12 @@ export default function CoinBalanceCard() {
             <div className='coinBalanceHeading'>
                 Coin Balance:
                 <div className='history'>
-                    <img style={{marginRight:"5px"}} src={historyPic} alt="" srcset="" /> History
+                    <img style={{marginRight:"5px"}} src={historyPic} alt="" /> History
                 </div>
             </div>
             <div className="coinBalanceCard">
                 <img src={pic} className="coinPic" alt="" />
-                <div >
+                <div className='coinBalanceRightSection'>
                     <div className='headerCard'>
                         Coin Balance
                     </div>

@@ -46,7 +46,8 @@
     display: flex;
   }
 
-  .walletCardImage,
-  .coinBalanceCardContainer {
+  .coinsHistoryCard {
+    display: none;
+    box-shadow: none;
   }
 }

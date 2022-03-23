@@ -46,6 +46,7 @@
   line-height: 1.75rem;
   text-align: center;
   color: #ffffff;
+  cursor: pointer;
 }
 
 .dash {
@@ -78,6 +79,17 @@
   margin-top: 1rem;
 }
 
+.savedMoney {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.5rem;
+  letter-spacing: 0.0025rem;
+  color: #000000;
+  display: flex;
+  margin-left: 1.3125rem;
+  margin-top: 1.3125rem;
+}
+
 .coinsOnWay {
   font-style: normal;
   font-weight: 400;
@@ -86,18 +98,6 @@
   color: #000000;
   margin-left: 1.3125rem;
   display: flex;
-}
-
-.savedMoney {
-  font-style: normal;
-  font-weight: 400;
-  font-size: 1.5rem;
-  line-height: 1.75rem;
-  letter-spacing: 0.0025rem;
-  color: #000000;
-  display: flex;
-  margin-left: 1.3125rem;
-  margin-top: 1.3125rem;
 }
 
 .onWayCoinsNumber {
@@ -115,6 +115,7 @@
   align-items: center;
   display: flex;
   justify-content: center;
+  border: solid 1px;
 }
 
 .onWayCoinsPriceNumber {
@@ -125,9 +126,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.green {
   color: #1dba78;
 }
 
@@ -213,3 +211,38 @@
         height: 700px;
     }
 } */
+.desktopModal {
+  position: absolute;
+  height: 400px;
+  width: 400px;
+  top: 50%;
+  left: 50%;
+  right: auto;
+  bottom: auto;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border-radius: 16px;
+  z-index: 1;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(0, 0, 0);
+  opacity: 0.9;
+}
+
+.customOverlay {
+  background: rgba(36, 123, 160, 0.7);
+}
+.customModal {
+  background: #b2dbbf;
+  width: 673px;
+  height: 767px;
+  border-radius: 16px;
+  background: #ffffff;
+}

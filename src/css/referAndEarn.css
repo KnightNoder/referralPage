@@ -1,34 +1,35 @@
 .referContainer {
-    background-color: #FFF5EF;
-    border-radius: 2rem;
-    overflow: auto;
+  background-color: #fff5ef;
+  border-radius: 2rem;
+  overflow: auto;
+  margin-top: 0px;
 }
 
-.topDivHeading{
-    font-size: 2.25rem;
-    font-style: normal;
-    font-weight: 700;
-    margin-top: 2.125rem;
-    margin-left: 3.3125rem;
-    height: 2.625rem;
-    color: #223263;
-    max-width: 14.9375rem;
+.topDivHeading {
+  font-size: 2.25rem;
+  font-style: normal;
+  font-weight: 700;
+  margin-top: 2.125rem;
+  margin-left: 3.3125rem;
+  height: 2.625rem;
+  color: #223263;
+  max-width: 14.9375rem;
 }
 
-.bottomDivHeading{
-    font-style: normal;
-    font-weight: normal;
-    font-size: 1.5rem;
-    color: #726868;
-    line-height : 1.25rem;
-    margin-left: 3.125rem;
-    margin-top: 1rem;
-    margin-bottom: 2rem;
-    height: 2.5rem;
+.bottomDivHeading {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.5rem;
+  color: #726868;
+  line-height: 1.25rem;
+  margin-left: 3.125rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  height: 2.5rem;
 }
 
-.coins{
-    font-weight: 1000;
-    font-size: 1.5rem;
-    color: #223263;
+.coins {
+  font-weight: 1000;
+  font-size: 1.5rem;
+  color: #223263;
 }

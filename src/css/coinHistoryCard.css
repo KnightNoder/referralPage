@@ -1,74 +1,80 @@
-.onWayCard{
-    background: #FFFFFF;
-    max-width: 34.1875rem;
-    height: 6.5625rem;
-    overflow: auto;
-    margin-top: 1.25rem;
-    margin-bottom: 1.25rem;
+.onWayCard {
+  background: #ffffff;
+  max-width: 34.1875rem;
+  overflow: auto;
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+  display: flex;
 }
 
-.onWayCardBody{
-    font-style: normal;
-    font-weight: 500;
-    font-size: 1.5rem;
-    line-height: 1.75rem;
-    color: black;
-    margin-left: 4.75rem;
-    margin-top: 1.1875rem;
+.onWayCardBody {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+  color: black;
+  margin-top: 1.1875rem;
 }
 
-.coinsHistoryCard{
-    flex:1;
-    background: #FFFFFF;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    border-radius: 14px;
-    margin-right: 0px;
-    margin-left: .625rem;
+.historyTag {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 1.1875rem;
+  color: #726868;
+  margin-top: 1rem;
+}
+.coinsHistoryCard {
+  flex: 1;
+  background: #ffffff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 14px;
+  margin-right: 0px;
+  margin-left: 0.5rem;
 }
 
-.coinsOnYourWay{
-    background: #FFFFFF;
-    box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.25);
-    border-radius: 8px;
-    margin-left: .9375rem;
-    margin-right: .875rem;
+.coinsOnYourWay {
+  background: #ffffff;
+  box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+  margin-left: 0.9375rem;
+  margin-right: 0.875rem;
 }
 
-.coinHistoryText{
-    font-style: normal;
-    font-weight: 700;
-    font-size: 1.5rem;
-    line-height: 1.75rem;
-    color: #000000;
-    margin-top: 2.3125rem;
-    margin-left: 2.6875rem;
+.coinHistoryText {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+  color: #000000;
+  margin-top: 2.3125rem;
+  margin-left: 2.6875rem;
 }
 
-.container{
-    margin-top: 6.25rem;
-    margin-left: 20%;
+.container {
+  margin-top: 6.25rem;
+  margin-left: 20%;
 }
 
-
-
-.historyTag{
-    font-style: normal;
-    font-weight: normal;
-    font-size: 1rem;
-    line-height: 1.1875rem;
-    color: #726868;
-    margin-top: 1rem;
-    margin-left: 4.9375rem;
+.linkToHistory {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+  text-decoration-line: underline;
+  color: #fe8276;
+  cursor: pointer;
+}
+.link {
+  margin: 2.3125rem 13.625rem;
 }
 
-.linkToHistory{
-    font-style: normal;
-    font-weight: 500;
-    font-size: 1.5rem;
-    line-height: 1.75rem;
-    text-decoration-line: underline;
-    color: #FE8276;
+.live {
+  margin-top: 1.5625rem;
+  margin-left: 3rem;
 }
-.link{
-    margin: 2.3125rem 13.625rem;
+
+.onYourWayData {
+  margin-left: 1rem;
+  width: 21.375rem;
 }

@@ -5,10 +5,11 @@ import discountIcon from './images/discount.png'
 import React, { useState } from 'react'
 import { BottomSheet } from 'react-spring-bottom-sheet';
 import 'react-spring-bottom-sheet/dist/style.css';
-import Modal from 'react-modal';
+import { Modal } from 'react-responsive-modal';
+import 'react-responsive-modal/styles.css';
+import Chip from '@mui/material/Chip';
+// import Modal from 'react-modal';
 import RedeemPopup from './RedeemPopup';
-import { maxWidth } from '@mui/system';
-// import Button from '@mui/material/Button';
 
 export default function CoinBalanceCard() {
     const [open, setOpen] = useState(false)
@@ -20,18 +21,25 @@ export default function CoinBalanceCard() {
             right: 'auto',
             bottom: 'auto',
             marginRight: '-50%',
-            transform: 'translate(-50%, -50%)'
+            transform: 'translate(-50%, -50%)',
         },
     }
-    function openModal() {
+    const openDesktopModal = () => {
         setIsOpen(true);
     }
-    function onDismiss() {
-        setOpen(false)
-    }
-    function closeModal() {
+    
+    const closeDesktopModal = () => {
         setIsOpen(false);
     }
+
+    const openMobileModal = () =>{
+        setOpen(true)
+    }
+
+    const closeMobileModal = () => {
+        setOpen(false)
+    }
+
     return (
         <>
             <div className="coinBalanceCard">
@@ -48,20 +56,29 @@ export default function CoinBalanceCard() {
             </div>
             <span className='earnings'>Lifetime earnings:</span><span className="amount">&#8377;1000.00</span>
             <div style={{ margin: "1.875rem 2.4375rem 0 2.5rem" }}>
-                <button id='redeemBtn' onClick={window.outerWidth > 480 ? openModal : (() => setOpen(true))} className='redeem' type="button">
+                <button id='redeemBtn' onClick={window.innerWidth > 480 ? openDesktopModal : openMobileModal} className='redeem' type="button">
                     {/* () => setOpen(true) */}
                     Redeem Now
                 </button>
-                <BottomSheet open={open} onDismiss={onDismiss}>
+                <BottomSheet open={open} onDismiss={closeMobileModal}>
                     <RedeemPopup />
                 </BottomSheet>
                 <Modal
-                    isOpen={modalIsOpen}
-                    onRequestClose={closeModal}
-                    contentLabel="Example Modal"
-                    style={customStyles}
+                    // isOpen={modalIsOpen}
+                    // onRequestClose={closeDesktopModal}
+                    center
+                    open={modalIsOpen}
+                    onClose={closeDesktopModal}
+                    classNames={{
+                        overlay: 'customOverlay',
+                        modal: 'customModal',
+                    }}
+                    // style={customStyles}
+                    // className="desktopModal"
+                    // overlayClassName="overlay"
                     // className='desktopPopup'
-                    ariaHideApp={false}
+                    // ariaHideApp={false}
+                    // contentLabel="Desktop Modal"
                 >
                     <RedeemPopup />
                 </Modal>
@@ -77,13 +94,14 @@ export default function CoinBalanceCard() {
             <div className="coinsOnWayFlex">
                 <img src={giftPic} className="giftPic" alt=""  />
                 <div className='coinsOnWay'>
-                    <span className="onWayCoinsNumber">200</span> coins are on the way
+                    <span className="onWayCoinsNumber">200</span>&nbsp;coins are on the way
+                    {/* <Chip label="200" classes={onWayCoinsNumber} component="a" href="#basic-chip" /> &nbsp;coins are on the way */}
                 </div>
             </div>
             <div className="savedMoneyCard">
                 <img src={discountIcon} className='discountPic' alt="" />
                 <div className='savedMoney'>
-                    You have saved &nbsp; <span className="onWayCoinsPriceNumber green"> &#8377;1000.00 </span> &nbsp; so far
+                    You have saved &nbsp; <span className="onWayCoinsPriceNumber"> &#8377;1000.00 </span> &nbsp; so far
                 </div>
             </div>
         </>

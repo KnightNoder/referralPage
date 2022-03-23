@@ -5,16 +5,16 @@
 }
 
 .walletCardImage {
+  flex: 1;
+  height: 100%;
+  margin-right: 0.5rem;
   /* border: solid 1px; */
-  background: #fff5ef;
-  border-radius: 16px;
-  height: 221px;
 }
 
 .coinBalanceCardContainer {
   background: linear-gradient(131.46deg, #c9e5fd 1.47%, #def0ff 103.63%);
   border-radius: 1rem;
   overflow: auto;
-  /* border: solid 1px; */
-  height: 302px;
+  flex: 1;
+  margin-left: 0.5rem;
 }

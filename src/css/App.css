@@ -44,11 +44,23 @@
   .walletCardsContainer {
     flex-direction: column-reverse;
     display: flex;
+    height: 552px;
+    border: solid 1px;
   }
 
   .coinsHistoryCard {
     display: none;
     box-shadow: none;
+  }
+
+  .walletCardImage {
+    height: 221px !important;
+    width: 100%;
+  }
+
+  .coinBalanceCardContainer {
+    height: 302px !important;
+    width: 100%;
   }
 
   .walletCardImage,

@@ -45,7 +45,6 @@
     flex-direction: column-reverse;
     display: flex;
     height: 552px;
-    border: solid 1px;
   }
 
   .coinsHistoryCard {

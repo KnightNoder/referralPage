@@ -4,18 +4,28 @@ import ReferAndEarn from './ReferAndEarn';
 import ReferAFriend from './ReferAFriend';
 import WalletCards from './WalletCards';
 import HowItWorksCards from './HowItWorksCards';
+import { createContext, useEffect, useState } from 'react';
 import './css/App.css'
 
+const screenSizeContext = createContext();
+
 export default function App() {
+  const [screenSize,setScreenSize] = useState('')
+  useEffect(()=>{
+    const screenWidth = window.innerWidth;
+    setScreenSize(screenWidth);
+  })
   return (
     <>
       <HeaderAndMenu />
-      <Container fixed className='mainContainer'>
-        <ReferAndEarn />
-        <ReferAFriend />
-        <WalletCards />
-        <HowItWorksCards />
-      </Container>
+      <screenSizeContext.Provider value={screenSize}>
+        <Container fixed className='mainContainer'>
+          <ReferAndEarn />
+          <ReferAFriend />
+          <WalletCards />
+          <HowItWorksCards />
+        </Container>
+      </screenSizeContext.Provider>
       {/* <div className='mainContainer'>
         <ReferAndEarn />
         <ReferAFriend />

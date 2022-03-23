@@ -50,4 +50,9 @@
     display: none;
     box-shadow: none;
   }
+
+  .walletCardImage,
+  .coinBalanceCardContainer {
+    margin: 5px 0px 5px 0px;
+  }
 }

@@ -17,6 +17,9 @@ export default function App() {
     setScreenSize(screenWidth);
   })
 
+  const toggleHistory = () => {
+    setShowHistory(true);
+  }
   const marginTopVal = screenSize > 480 ? "70px" : "20px"
   return (
     <>
@@ -25,7 +28,7 @@ export default function App() {
         <Container fixed className='mainContainer' style={{marginTop:marginTopVal} }>
           {!showHistory ? <ReferAndEarn /> : null}
           <ReferAFriend />
-          {!showHistory ? <WalletCards /> : null}
+          {!showHistory ? <WalletCards showHistoryFunc={toggleHistory} /> : null}
           {!showHistory ? <HowItWorksCards /> : null}
         </Container>
       </mobileViewContext.Provider>

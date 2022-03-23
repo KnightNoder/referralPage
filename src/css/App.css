@@ -91,6 +91,7 @@
   }
   .coinBalanceRightSection {
     width: 100%;
+    border: solid 1px;
   }
   .referContainer {
     padding-bottom: 20px;

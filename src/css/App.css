@@ -80,11 +80,15 @@
     margin-top: 12px;
     margin-left: 100px;
     margin: 0 auto;
-    margin-top: 10px;
-    margin-left: 100px;
+    margin-top: 20px;
+    margin-left: 130px;
     display: inline-block;
+    font-size: 20px;
   }
 
+  .coinPic {
+    display: none;
+  }
   .coinBalanceRightSection {
     width: 100%;
   }

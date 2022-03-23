@@ -7,10 +7,11 @@ import HowItWorksCards from './HowItWorksCards';
 import { createContext, useEffect, useState } from 'react';
 import './css/App.css'
 
-const screenSizeContext = createContext();
+const mobileViewContext = createContext();
 
 export default function App() {
   const [screenSize,setScreenSize] = useState('')
+  const [showHistory,setShowHistory] = useState(false)
   useEffect(()=>{
     const screenWidth = window.innerWidth;
     setScreenSize(screenWidth);
@@ -20,14 +21,14 @@ export default function App() {
   return (
     <>
       <HeaderAndMenu />
-      <screenSizeContext.Provider value={screenSize}>
+      <mobileViewContext.Provider value={showHistory}>
         <Container fixed className='mainContainer' style={{marginTop:marginTopVal} }>
-          <ReferAndEarn />
+          {!showHistory ? <ReferAndEarn /> : null}
           <ReferAFriend />
-          <WalletCards />
-          <HowItWorksCards />
+          {!showHistory ? <WalletCards /> : null}
+          {!showHistory ? <HowItWorksCards /> : null}
         </Container>
-      </screenSizeContext.Provider>
+      </mobileViewContext.Provider>
       {/* <div className='mainContainer'>
         <ReferAndEarn />
         <ReferAFriend />

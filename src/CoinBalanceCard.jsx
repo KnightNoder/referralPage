@@ -3,7 +3,7 @@ import giftPic from "./images/gift.png"
 import pic from "./images/coin symbol.jpg"
 import historyPic from './images/history.png'
 import discountIcon from './images/discount.png'
-import React, { useState } from 'react'
+import React, { useState,useContext,createContext  } from 'react'
 import { BottomSheet } from 'react-spring-bottom-sheet';
 import 'react-spring-bottom-sheet/dist/style.css';
 import { Modal } from 'react-responsive-modal';
@@ -11,8 +11,10 @@ import 'react-responsive-modal/styles.css';
 import Chip from '@mui/material/Chip';
 // import Modal from 'react-modal';
 import RedeemPopup from './RedeemPopup';
+const mobileViewContext = createContext();
 
 export default function CoinBalanceCard() {
+    const showHistory = useContext(mobileViewContext);
     const [open, setOpen] = useState(false)
     const [modalIsOpen, setIsOpen] = useState(false);
     const customStyles = {
@@ -76,10 +78,10 @@ export default function CoinBalanceCard() {
                     center
                     open={modalIsOpen}
                     onClose={closeDesktopModal}
-                    classNames={{
-                        overlay: 'customOverlay',
-                        modal: 'customModal',
-                    }}
+                    // classNames={{
+                    //     overlay: 'customOverlay',
+                    //     modal: 'customModal',
+                    // }}
                     // style={customStyles}
                     // className="desktopModal"
                     // overlayClassName="overlay"

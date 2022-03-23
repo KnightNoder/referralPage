@@ -1,6 +1,7 @@
 import './css/coinBalanceCard.css'
 import giftPic from "./images/gift.png"
 import pic from "./images/coin symbol.jpg"
+import historyPic from './images/history.png'
 import discountIcon from './images/discount.png'
 import React, { useState } from 'react'
 import { BottomSheet } from 'react-spring-bottom-sheet';
@@ -42,6 +43,12 @@ export default function CoinBalanceCard() {
 
     return (
         <>
+            <div className='coinBalanceHeading'>
+                Coin Balance:
+                <div className='history'>
+                    <img style={{marginRight:"5px"}} src={historyPic} alt="" srcset="" /> History
+                </div>
+            </div>
             <div className="coinBalanceCard">
                 <img src={pic} className="coinPic" alt="" />
                 <div >

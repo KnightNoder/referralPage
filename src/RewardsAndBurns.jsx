@@ -7,22 +7,33 @@ const RewardsAndBurns = () => {
     const [trackHistory,setTrackHistory] = useState(false)
     const [buttonsState,setButtonState] = useState({
         rewardsButtonColor: "white",
-        burnsButtonColor:"none"
+        burnsButtonColor:"#ebebeb",
+        rewardsButtonTextColor:"red",
+        burnsButtonTextColor:"black"
     })
     const showRewards = () =>{
         setTrackHistory(false);
         setButtonState({
-            rewardsButtonColor: "white",
-            burnsButtonColor:"none"
+            rewardsButtonColor: "white ",
+            burnsButtonColor:"#ebebeb",
+            rewardsButtonTextColor:"red",
+            burnsButtonTextColor:"black"
         })
+        console.log(buttonsState,'buttonState')
     }
     const showBurns = () => {
         setTrackHistory(true);
         setButtonState({
-            rewardsButtonColor: "none",
-            burnsButtonColor:"white"
+            rewardsButtonColor: "#ebebeb",
+            burnsButtonColor:"white",
+            rewardsButtonTextColor:"black",
+            burnsButtonTextColor:"red"
+
         })
+        console.log(buttonsState,'buttonState')
     }
+
+    const {rewardsButtonColor,burnsButtonColor,rewardsButtonTextColor,burnsButtonTextColor } = buttonsState;
   return (
     <>
         <div className='rewardsAndBurnsContainer'>
@@ -30,10 +41,10 @@ const RewardsAndBurns = () => {
                 History
             </div>
             <div className='toggleButtons'>
-                <button className='rewards' onClick={showRewards}> 
+                <button className='rewards' style={{backgroundColor: rewardsButtonColor, color:rewardsButtonTextColor }} onClick={showRewards}> 
                     Rewards
                 </button>
-                <button className='burns' onClick={showBurns}>
+                <button className='burns' style={{backgroundColor: burnsButtonColor, color: burnsButtonTextColor}} onClick={showBurns}>
                     Burns
                 </button>
             </div>  

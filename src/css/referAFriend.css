@@ -1,9 +1,7 @@
 .referAFriendContainer {
   background-color: white;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
   border-radius: 1rem;
   overflow: auto;
-  margin-top: 3.5rem;
 }
 
 .refer {
@@ -21,15 +19,13 @@
   max-width: 100%;
   overflow: auto;
   display: flex;
-  margin-bottom: 1.875rem;
   /* margin-left: 3.3125rem; */
 }
 
 .coupon {
   background-color: #ffffff;
-  border: 0.125rem dashed #c4c4c4;
   border-radius: 0.3125rem;
-  width: 60%;
+  width: 55%;
   height: 4.375rem;
   margin-left: 3.3125rem;
   display: flex;
@@ -38,7 +34,6 @@
 .couponText {
   font-style: normal;
   font-weight: normal;
-  font-size: 1.5rem;
   color: #2fa83b;
   margin: 1.125rem 0px 1.1875rem 1.75rem;
 }
@@ -71,18 +66,17 @@
   box-sizing: border-box;
   border-radius: 5px;
   display: inline-block;
-  margin-left: 4rem;
   width: 17.3125rem;
   text-align: center;
   margin-right: 1.5rem;
   cursor: pointer;
+  display: flex;
 }
 
 .referText {
   font-style: normal;
   font-weight: 500;
   font-size: 1.5rem;
-  text-align: center;
   margin-top: 1.1875rem;
   margin-bottom: 1.1875rem;
   color: #ffffff;

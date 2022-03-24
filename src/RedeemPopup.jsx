@@ -3,6 +3,8 @@ import Container from '@mui/material/Container';
 import pic from './images/goldcoin.png'
 import minus from './images/minus.png'
 import plus from './images/plus.png'
+import share from './images/small-share.png'
+import next from './images/next.png'
 import { useState } from 'react';
 import LinearProgress from '@mui/material/LinearProgress';
 
@@ -72,10 +74,10 @@ export default function () {
                             Earn More. Save More.
                         </div>
                         <div className='saveContent'>
-                            100 coins for every referral order
+                            <img src={share} alt="" style={{}} /> 100 coins for every referral order
                         </div>
                         <div className='saveContent bottom'>
-                            Use these Coins to save on your next purchase
+                        <img src={next} alt="" style={{}} /> Use these Coins to save on your next purchase
                         </div>
                     </div>
                     <div className='referMore'>

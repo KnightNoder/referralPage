@@ -1,4 +1,5 @@
 import './css/coinBalanceCard.css'
+// import coinPic from './images/onlycoin.png'
 import giftPic from "./images/gift.png"
 import pic from "./images/coin symbol.jpg"
 import historyPic from './images/history.png'
@@ -51,12 +52,13 @@ export default function CoinBalanceCard({showHistory}) {
                 </div>
             </div>
             <div className="coinBalanceCard">
-                <img src={pic} className="coinPic" alt="" />
+                <img src={pic} className="coinPic"  alt="" />
                 <div className='coinBalanceRightSection'>
                     <div className='headerCard'>
                         Coin Balance
                     </div>
                     <div className='coinBalanceDiv'>
+                        {/* <img src={coinPic} alt="" srcset="" /> */}
                         <div className='coinBalance'>
                             1600
                         </div>

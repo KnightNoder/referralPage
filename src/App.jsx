@@ -29,7 +29,7 @@ export default function App() {
   const toggleHistoryFalse = () => {
     setShowHistory(false);
   } 
-
+  console.log(screenSize,'size')
   const marginTopVal = screenSize > 480 ? "70px" : "20px"
   return (
     <>

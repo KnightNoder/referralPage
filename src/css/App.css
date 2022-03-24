@@ -73,7 +73,10 @@
     margin: 5px 0px 5px 0px;
   }
 
-  .headerCard {
+  .headerCard,
+  .coinPic,
+  .coinsHistoryCard,
+  .rupee {
     display: none;
   }
   .coinBalance {
@@ -86,9 +89,6 @@
     font-size: 20px;
   }
 
-  .coinPic {
-    display: none;
-  }
   .coinBalanceRightSection {
     width: 100%;
   }
@@ -108,9 +108,5 @@
 
   .referAFriendContainer {
     box-shadow: none;
-  }
-
-  .rupee {
-    display: none;
   }
 }

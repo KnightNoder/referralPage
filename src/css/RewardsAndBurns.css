@@ -1,0 +1,47 @@
+.rewardsAndBurnsHeading {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21px;
+  color: #000000;
+  margin-top: 23px;
+  margin-left: 8px;
+}
+
+.toggleButtons {
+  display: flex;
+  background: #ebebeb;
+  border-radius: 4px;
+  margin-top: 20px;
+  margin-left: 6px;
+}
+
+.rewards {
+  flex: 1;
+  margin: 2px;
+  border: none;
+  padding: 8px;
+  /* background: #ffffff; */
+  border-radius: 4px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+  color: #000000;
+}
+
+.burns {
+  flex: 1;
+  margin: 2px;
+  border: none;
+  padding: 8px;
+  background-color: white;
+  border-radius: 4px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+  color: #fe8276;
+}

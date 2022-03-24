@@ -7,6 +7,7 @@ import HowItWorksCards from './HowItWorksCards';
 import { createContext, useEffect, useState } from 'react';
 import CoinsOnYourWayCard from './CoinsOnYourWayCard';
 import BackNavigator from './BackNavigator';
+import RewardsAndBurns from './RewardsAndBurns';
 import './css/coinHistoryCard.css'
 // import './css/coinHistoryCard.css'
 import './css/App.css'
@@ -41,6 +42,7 @@ export default function App() {
           {!showHistory ? <WalletCards showHistory={toggleHistoryTrue} /> : null}
           {!showHistory ? <HowItWorksCards /> : null}
           {showHistory ? <div className='coinsOnYourWay'><CoinsOnYourWayCard /></div> : null}
+          {showHistory ? <RewardsAndBurns/> : null}
         </Container>
       </mobileViewContext.Provider>
       {/* <div className='mainContainer'>

@@ -73,6 +73,10 @@
     margin-left: 0.9375rem;
     margin-right: 0.875rem;
   }
+
+  .onWayCardBody {
+    font-size: 1.5rem;
+  }
 }
 
 @media only screen and (max-width: 480px) {
@@ -235,5 +239,9 @@
     /* border: solid 1px; */
     margin-left: 5px;
     font-size: 20px;
+  }
+
+  .onWayCardBody {
+    font-size: 14px;
   }
 }

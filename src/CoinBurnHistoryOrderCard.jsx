@@ -1,7 +1,7 @@
 import './css/coinHistoryOrderCard.css'
 import pic from './images/fire.png';
 import calenderPic from './images/calender.png';
-import coinPic from './images/500coin.jpg';
+import coinPic from './images/100coin.png';
 export default function CoinBurnHistoryOrderCard() {
     return (
         <>

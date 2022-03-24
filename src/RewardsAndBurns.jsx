@@ -20,6 +20,7 @@ const RewardsAndBurns = () => {
                 <CoinHistoryOrderCard />
                 <CoinHistoryOrderCard />
                 <CoinHistoryOrderCard />
+                <CoinHistoryOrderCard />
             </div>
         </div>
     </>

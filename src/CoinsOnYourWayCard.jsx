@@ -1,11 +1,13 @@
 import './css/coinHistoryCard.css'
 import pic from './images/live.png'
 export default function CoinsOnYourWayCard() {
+    const screenWidth = window.innerWidth;
+    const customStyle = {height:"20px",width:"20px"}
     return (
         <>
             <div className="onWayCard">
                 <div className='live'>
-                    <img src={pic} alt="" />
+                    <img src={pic}  alt="" />
                 </div>
                 <div className='onYourWayData'>
                     <div className="onWayCardBody">

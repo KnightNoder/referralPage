@@ -261,6 +261,8 @@
   color: #000000;
   margin-right: 2.435rem;
   cursor: pointer;
+  display: flex;
+  align-items: baseline;
 }
 
 .coinBalance {

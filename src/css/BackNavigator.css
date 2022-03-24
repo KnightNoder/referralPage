@@ -5,8 +5,10 @@
   line-height: 16px;
   color: #000000;
   display: inline-block;
+  margin-left: 5px;
 }
 
 .backNavigatorContainer {
-  display: inline-block;
+  display: flex;
+  align-items: baseline;
 }

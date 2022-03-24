@@ -240,4 +240,9 @@
   .onWayCardBody {
     font-size: 14px;
   }
+
+  .redeem {
+    font-size: 20px;
+    height: 44px;
+  }
 }

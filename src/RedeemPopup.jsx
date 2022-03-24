@@ -1,35 +1,66 @@
 import './css/redeemPopup.css'
 import Container from '@mui/material/Container';
 import pic from './images/goldcoin.png'
+import minus from './images/minus.png'
+import plus from './images/plus.png'
+import { useState } from 'react';
 export default function () {
-
+    const [redeemAmount,setRedeemAmount] = useState(1000);
+    const balanceAmount = 1600;
+    const decrement = () => {
+        if((redeemAmount-500) >=0) {
+            setRedeemAmount(redeemAmount-500)
+        }
+    }
+    const increment = () => {
+        console.log(redeemAmount+500, balanceAmount,'amounts')
+        console.log((redeemAmount+500) <= balanceAmount,'condition')
+        if((redeemAmount+500) <= balanceAmount){
+            setRedeemAmount((redeemAmount)+500)
+        }
+    }
     return (
 
         <>
             <Container>
-
                 <div className='modalContainer'>
-                    <div className='modalHeader'>
-                        Redeem coins
+                    <div className='headerContent'>
+                        <div className='modalHeader'>
+                            Redeem Coins
+                        </div>
+                        <div className='redeemCoinBalance'>
+                            <div className='redeemCoinBalanceText'>
+                                Balance:
+                            </div>
+                            <div className='redeemCoinBalanceAmount'>
+                                {balanceAmount}
+                            </div>
+                        </div>
                     </div>
                     <div className='addCoins'>
+                        <div className='minus' onClick={()=> decrement()}>
+                            <img src={minus} alt="" />
+                        </div>
                         <div className='addCoinsText'>
-                            <img src={pic} alt="" /> 1000
+                            <img src={pic} alt="" /> {redeemAmount}
+                        </div>
+                        <div className='plus' onClick={()=> increment()}>
+                            <img src={plus} alt="" />
                         </div>
                     </div>
                     <div className='coinsList'>
                         <div className='fiveHundred'>
-                            <div className='fiveHundredText'>
+                            <div className='fiveHundredText' onClick={() => setRedeemAmount(500)}>
                                 500
                             </div>
                         </div>
                         <div className='thousand'>
-                            <div className='thousandText'>
+                            <div className='thousandText' onClick={() => setRedeemAmount(1000)}>
                                 1000
                             </div>
                         </div>
                         <div className='fifteenHundred'>
-                            <div className='fifteenHundredText'>
+                            <div className='fifteenHundredText' onClick={() => setRedeemAmount(1500)}>
                                 1500
                             </div>
                         </div>

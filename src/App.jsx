@@ -5,6 +5,10 @@ import ReferAFriend from './ReferAFriend';
 import WalletCards from './WalletCards';
 import HowItWorksCards from './HowItWorksCards';
 import { createContext, useEffect, useState } from 'react';
+import CoinsOnYourWayCard from './CoinsOnYourWayCard';
+import BackNavigator from './BackNavigator';
+import './css/coinHistoryCard.css'
+// import './css/coinHistoryCard.css'
 import './css/App.css'
 
 const mobileViewContext = createContext();
@@ -17,19 +21,26 @@ export default function App() {
     setScreenSize(screenWidth);
   })
 
-  const toggleHistory = () => {
+  const toggleHistoryTrue = () => {
     setShowHistory(true);
   }
+
+  const toggleHistoryFalse = () => {
+    setShowHistory(false);
+  } 
+
   const marginTopVal = screenSize > 480 ? "70px" : "20px"
   return (
     <>
       <HeaderAndMenu />
       <mobileViewContext.Provider value={showHistory}>
         <Container fixed className='mainContainer' style={{marginTop:marginTopVal} }>
+          {showHistory ? <BackNavigator hideHistory={toggleHistoryFalse} /> : null}
           {!showHistory ? <ReferAndEarn /> : null}
           <ReferAFriend />
-          {!showHistory ? <WalletCards showHistoryFunc={toggleHistory} /> : null}
+          {!showHistory ? <WalletCards showHistory={toggleHistoryTrue} /> : null}
           {!showHistory ? <HowItWorksCards /> : null}
+          {showHistory ? <div className='coinsOnYourWay'><CoinsOnYourWayCard /></div> : null}
         </Container>
       </mobileViewContext.Provider>
       {/* <div className='mainContainer'>

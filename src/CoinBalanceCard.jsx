@@ -13,8 +13,7 @@ import Chip from '@mui/material/Chip';
 import RedeemPopup from './RedeemPopup';
 const mobileViewContext = createContext();
 
-export default function CoinBalanceCard({showHistoryFunc}) {
-    const showHistory = useContext(mobileViewContext);
+export default function CoinBalanceCard({showHistory}) {
     const [open, setOpen] = useState(false)
     const [modalIsOpen, setIsOpen] = useState(false);
     const customStyles = {
@@ -47,7 +46,7 @@ export default function CoinBalanceCard({showHistoryFunc}) {
         <>
             <div className='coinBalanceHeading'>
                 Coin Balance:
-                <div className='history' onClick={() => showHistoryFunc()}>
+                <div className='history' onClick={() => showHistory()}>
                     <img style={{marginRight:"5px"}} src={historyPic} alt="" /> History
                 </div>
             </div>

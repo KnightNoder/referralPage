@@ -58,7 +58,7 @@ export default function CoinBalanceCard({showHistory}) {
                     </div>
                     <div className='coinBalanceDiv'>
                         <div className='coinBalance'>
-                            1000 
+                            1600
                         </div>
                         <div className='rupee'>
                         1 Coin = &#8377;1

@@ -78,3 +78,18 @@
   margin-left: 1rem;
   width: 21.375rem;
 }
+
+.coinHistoryPopUpHeader {
+  padding: 20px 10px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 38px;
+  color: #000000;
+  border-bottom: 1px solid #a6a6a6;
+}
+
+.popUpContainer {
+  background: #ffffff;
+  border-radius: 50px;
+}

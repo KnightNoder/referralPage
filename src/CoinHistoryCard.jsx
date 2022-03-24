@@ -5,6 +5,7 @@ import CoinHistoryOrderCard from './CoinHistoryOrderCard';
 import { Modal } from 'react-responsive-modal';
 import 'react-responsive-modal/styles.css';
 import RedeemPopup from './RedeemPopup';
+import CoinHistoryPopUp from './CoinHistoryPopUp'
 import { useState } from 'react';
 export default function CoinHistoryCard() {
     const [modalIsOpen, setIsOpen] = useState(false);
@@ -58,7 +59,8 @@ export default function CoinHistoryCard() {
                 // ariaHideApp={false}
                 // contentLabel="Desktop Modal"
             >
-                <RedeemPopup/>
+                {/* <RedeemPopup/> */}
+                <CoinHistoryPopUp/>
             </Modal>
         </>
     )

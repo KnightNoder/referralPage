@@ -38,6 +38,9 @@ export default function App() {
         <Container fixed className='mainContainer' style={{marginTop:marginTopVal} }>
           {showHistory ? <BackNavigator hideHistory={toggleHistoryFalse} /> : null}
           {!showHistory ? <ReferAndEarn /> : null}
+          <div className='mobileReferralCode'>
+            My referral Code
+          </div>
           <ReferAFriend />
           {!showHistory ? <WalletCards showHistory={toggleHistoryTrue} /> : null}
           {!showHistory ? <HowItWorksCards /> : null}

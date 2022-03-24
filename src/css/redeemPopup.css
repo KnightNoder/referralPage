@@ -94,7 +94,7 @@
   text-align: center;
   color: #ffffff;
   margin-top: 32px;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
 }
 .modalContainer {
   /* border: solid 1px; */
@@ -138,14 +138,13 @@
   border-radius: 6px;
   margin-top: 9px;
   text-align: center;
-  border: solid 1px;
+  /* border: solid 1px; */
 }
 
 .addCoinsText {
   font-style: normal;
   font-weight: 500;
   font-size: 24px;
-  line-height: 28px;
   letter-spacing: 0.0025em;
   color: #000000;
   margin: 12px 0px 12px 0px;
@@ -157,7 +156,7 @@
   float: left;
   /* border: solid 1px; */
   display: inline-block;
-  margin-top: 20px;
+  margin-top: 17px;
   margin-left: 22px;
   cursor: pointer;
 }
@@ -167,4 +166,8 @@
   margin-right: 22px;
   margin-top: 15px;
   cursor: pointer;
+}
+
+.progressBar {
+  margin-top: 20px;
 }

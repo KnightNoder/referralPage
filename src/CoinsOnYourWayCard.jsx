@@ -7,7 +7,7 @@ export default function CoinsOnYourWayCard() {
         <>
             <div className="onWayCard">
                 <div className='live'>
-                    <img src={pic}  alt="" />
+                    <img src={pic} className="livePic" alt="" />
                 </div>
                 <div className='onYourWayData'>
                     <div className="onWayCardBody">

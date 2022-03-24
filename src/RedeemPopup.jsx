@@ -4,8 +4,12 @@ import pic from './images/goldcoin.png'
 import minus from './images/minus.png'
 import plus from './images/plus.png'
 import { useState } from 'react';
+import LinearProgress from '@mui/material/LinearProgress';
+
+
+
 export default function () {
-    const [redeemAmount,setRedeemAmount] = useState(1000);
+    const [redeemAmount,setRedeemAmount] = useState(500);
     const balanceAmount = 1600;
     const decrement = () => {
         if((redeemAmount-500) >=0) {
@@ -13,8 +17,6 @@ export default function () {
         }
     }
     const increment = () => {
-        console.log(redeemAmount+500, balanceAmount,'amounts')
-        console.log((redeemAmount+500) <= balanceAmount,'condition')
         if((redeemAmount+500) <= balanceAmount){
             setRedeemAmount((redeemAmount)+500)
         }
@@ -81,6 +83,9 @@ export default function () {
                             2000 coins
                         </span>
                     </div>
+                </div>
+                <div className='progressBar'>
+                    <LinearProgress color='success' variant="determinate" value={80} />
                 </div>
                 <button id='redeemBtn' className='redeemButtonPopUp' type="button">
                     Redeem Now

@@ -35,6 +35,9 @@
   .coinBalanceHeading {
     display: none;
   }
+  .mobileReferralCode {
+    display: none;
+  }
 }
 
 @media only screen and (max-width: 480px) {
@@ -107,9 +110,66 @@
   }
 
   .referAFriendContainer {
-    box-shadow: none;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
+    background: #ffffff;
+    border: 1px dashed #c4c4c4;
+    box-sizing: border-box;
+    border-radius: 3px;
+    margin-top: 0px;
   }
 
-  .live {
+  .livePic {
+    height: 20px;
+    width: 20px;
+  }
+  .coinsOnYourWay {
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
+  }
+
+  .refer {
+    display: none;
+  }
+  .coupon {
+    border: none;
+    margin-left: 8px;
+  }
+
+  .couponText {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: #5f9e71;
+  }
+
+  .referText {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: #ffffff;
+  }
+
+  .code {
+    /* border: solid 1px; */
+    margin-bottom: 5px;
+    margin-top: 5px;
+  }
+
+  .referFriend {
+    margin-left: 0px;
+  }
+
+  .mobileReferralCode {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: #8a8a8a;
+    margin-top: 12px;
+    margin-left: 10px;
+    margin-bottom: 5px;
   }
 }

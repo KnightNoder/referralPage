@@ -68,7 +68,9 @@ export default function CoinBalanceCard({showHistory}) {
                     </div>
                 </div>
             </div>
-            <span className='earnings'>Lifetime earnings:</span><span className="amount">&#8377;1000.00</span>
+            <div style={{display:"flex", alignItems:"baseline"}}>
+                <span className='earnings'>Lifetime earnings:</span><span className="amount">&#8377;1000.00</span>
+            </div>
             <div style={{ margin: "1.875rem 2.4375rem 0 2.5rem" }}>
                 <button id='redeemBtn' onClick={window.innerWidth > 480 ? openDesktopModal : openMobileModal} className='redeem' type="button">
                     {/* () => setOpen(true) */}

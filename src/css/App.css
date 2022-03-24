@@ -197,6 +197,7 @@
 
   .referFriend {
     margin-left: 0px;
+    display: flex;
   }
 
   .mobileReferralCode {
@@ -221,11 +222,6 @@
 
   .amount {
     font-weight: 700;
-  }
-
-  .referFriend {
-    display: flex;
-    /* border: solid 1px; */
   }
 
   .sharePic {

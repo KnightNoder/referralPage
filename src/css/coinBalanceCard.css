@@ -52,7 +52,7 @@
 
 .dash {
   border: none;
-  border: 1px dashed #000000;
+  border-bottom: 1px dashed #000000;
   height: 0px;
   margin-top: 2.0625rem;
   margin: 2.0625rem 2.1875rem 0px 2.1875rem;

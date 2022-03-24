@@ -95,6 +95,7 @@
   color: #ffffff;
   margin-top: 32px;
   margin-bottom: 20px;
+  cursor: pointer;
 }
 .modalContainer {
   /* border: solid 1px; */

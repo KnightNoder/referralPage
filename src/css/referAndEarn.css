@@ -3,6 +3,8 @@
   border-radius: 2rem;
   overflow: auto;
   margin-top: 0px;
+  background-image: url("../images/gift2.png");
+  z-index: 1;
 }
 
 .topDivHeading {

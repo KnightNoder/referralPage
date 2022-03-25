@@ -257,4 +257,7 @@
   .copyCoupon {
     display: none;
   }
+  .howItWorksImageContainer {
+    box-shadow: none;
+  }
 }

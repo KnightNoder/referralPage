@@ -19,11 +19,13 @@ export default function ReferAFriend() {
                         <div className="couponText">
                             USERNAME1938
                         </div>
-                        {/* <button className='copyCoupon' type='button'>
-                            <p className='copyCouponText'>
-                                Copy
-                            </p>
-                        </button> */}
+                        <div style={{}}>
+                            <button className='copyCoupon' type='button'>
+                                {/* <p className='copyCouponText'> */}
+                                    Copy
+                                {/* </p> */}
+                            </button>
+                        </div>
                     </div>
                     <div className="referFriend">
                         <img src={sharePic} alt="" className='sharePic'  />

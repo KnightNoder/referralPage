@@ -41,7 +41,8 @@
 .copyCoupon {
   width: 7.9375rem;
   background: #edefed;
-  border: 1px solid #edefed;
+  /* border: 1px solid #edefed; */
+  border: none;
   box-sizing: border-box;
   border-radius: 5px;
   font-style: normal;
@@ -49,7 +50,8 @@
   font-size: 1.5rem;
   line-height: 1.75rem;
   color: #8a8a8a;
-  margin-left: 17.0625rem;
+  height: 66px;
+  margin-left: 295px;
 }
 
 .copyCouponText {

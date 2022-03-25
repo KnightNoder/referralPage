@@ -13,7 +13,7 @@
   margin-right: 25rem;
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1000px) {
   html {
     font-size: 13px;
   }
@@ -76,6 +76,10 @@
 
   .onWayCardBody {
     font-size: 1.5rem;
+  }
+
+  .coinsOnWayFlex {
+    margin-top: 2.25rem;
   }
 }
 
@@ -244,5 +248,13 @@
   .redeem {
     font-size: 20px;
     height: 44px;
+  }
+
+  .coinsOnWayFlex {
+    margin-top: 12px;
+  }
+
+  .copyCoupon {
+    display: none;
   }
 }

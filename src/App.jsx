@@ -9,6 +9,9 @@ import CoinsOnYourWayCard from './CoinsOnYourWayCard';
 import BackNavigator from './BackNavigator';
 import RewardsAndBurns from './RewardsAndBurns';
 import './css/coinHistoryCard.css'
+import gift from './images/celeb_best.png'
+// import gift from './images/celeb-white-removebg-preview.jpg'
+// import gift from './images/celeb-white.png'
 // import './css/coinHistoryCard.css'
 import './css/App.css'
 
@@ -36,12 +39,19 @@ export default function App() {
       <HeaderAndMenu />
       <mobileViewContext.Provider value={showHistory}>
         <Container fixed className='mainContainer' style={{marginTop:marginTopVal} }>
+
           {showHistory ? <BackNavigator hideHistory={toggleHistoryFalse} /> : null}
           {!showHistory ? <ReferAndEarn /> : null}
           <div className='mobileReferralCode'>
-            My referral Code
+            My Referral Code
           </div>
           <ReferAFriend />
+          {/* {showHistory ? */}
+           {/* <img src={gift} style={{backgroundColor:"white",zIndex:"1",top:"195px", 
+          left:"70%" ,display:"inline", position:"absolute",height:"80px",width:"200px"}} alt="" />  */}
+          {/* // : null } */}
+          {/* <img src={gift} style={{backgroundColor:"white",zIndex:"1",top:"200px", 
+          left:"70%" ,display:"inline", position:"absolute",height:"200px",width:"200px"}} alt="" /> */}
           {!showHistory ? <WalletCards showHistory={toggleHistoryTrue} /> : null}
           {!showHistory ? <HowItWorksCards /> : null}
           {showHistory ? <div className='coinsOnYourWay'><CoinsOnYourWayCard /></div> : null}

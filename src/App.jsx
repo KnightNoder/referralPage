@@ -38,7 +38,7 @@ export default function App() {
   const getEarningsData = async () => {
       const config = {
           method: 'post',
-          url : `http://${process.env.REACT_APP_REFERRAL_BASE_URL}/referral/checkBalance`,
+          url : `https://${process.env.REACT_APP_REFERRAL_BASE_URL}/referral/checkBalance`,
           headers: { 
           'Content-Type': 'application/json'
           },

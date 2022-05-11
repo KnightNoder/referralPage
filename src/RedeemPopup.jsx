@@ -5,24 +5,53 @@ import minus from './images/minus.png'
 import plus from './images/plus.png'
 import share from './images/small-share.png'
 import next from './images/next.png'
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import LinearProgress from '@mui/material/LinearProgress';
+import React, {Component} from 'react'
+import axios from 'axios';
 
-
-
-export default function () {
-    const [redeemAmount,setRedeemAmount] = useState(500);
-    const balanceAmount = 1600;
+export default function RedeemPopup ({user_data}) {
+    const [redeemAmount,setRedeemAmount] = useState(0);
+    const [progress_amount,Set_progress_amount] = useState(10)
+    // const balanceAmount = 1600;
     const decrement = () => {
         if((redeemAmount-500) >=0) {
             setRedeemAmount(redeemAmount-500)
         }
     }
     const increment = () => {
-        if((redeemAmount+500) <= balanceAmount){
+        if((redeemAmount+500) <= user_data.balance){
             setRedeemAmount((redeemAmount)+500)
         }
     }
+
+    
+    const redeemCoins = async () => {
+        console.log(redeemAmount,'redeem amount');
+        const data = {
+            "customer_id":"4320944390308",
+            "redeem": redeemAmount
+        }
+        const config = {
+            method: 'post',
+            url : `http://${process.env.REACT_APP_REFERRAL_BASE_URL}/referral/redeem`,
+            headers: { 
+            'Content-Type': 'application/json'
+            },
+            data : data
+        }
+        
+        await axios(config).then((response)=>{
+            console.log(response.data,'resp body')
+        }).catch((error)=>{
+            console.log(error);
+        })
+    }
+    useEffect(()=>{
+
+        const progress_value = parseInt(user_data.balance)*100/2000;
+        Set_progress_amount(progress_value);
+    },[])
     return (
 
         <>
@@ -37,7 +66,7 @@ export default function () {
                                 Balance:
                             </div>
                             <div className='redeemCoinBalanceAmount'>
-                                {balanceAmount}
+                                {user_data.balance}
                             </div>
                         </div>
                     </div>
@@ -87,9 +116,9 @@ export default function () {
                     </div>
                 </div>
                 <div className='progressBar'>
-                    <LinearProgress color='success' variant="determinate" value={80} />
+                    <LinearProgress color='success' variant="determinate" value={progress_amount} />
                 </div>
-                <button id='redeemBtn' className='redeemButtonPopUp' type="button">
+                <button id='redeemBtn' className='redeemButtonPopUp' type="button" onClick={() => redeemCoins()}>
                     Redeem Now
                 </button>
             </Container>

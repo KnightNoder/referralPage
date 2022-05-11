@@ -1,10 +1,8 @@
 import './css/coinBalanceCard.css'
 // import coinPic from './images/onlycoin.png'
-import giftPic from "./images/gift.png"
 import pic from "./images/coin symbol.jpg"
 import historyPic from './images/history3.png'
-import discountIcon from './images/discount.png'
-import React, { useState,useContext,createContext  } from 'react'
+import React, { useState,useContext,createContext, useEffect  } from 'react'
 import { BottomSheet } from 'react-spring-bottom-sheet';
 import 'react-spring-bottom-sheet/dist/style.css';
 import { Modal } from 'react-responsive-modal';
@@ -12,9 +10,10 @@ import 'react-responsive-modal/styles.css';
 import Chip from '@mui/material/Chip';
 // import Modal from 'react-modal';
 import RedeemPopup from './RedeemPopup';
+import axios from 'axios';
 const mobileViewContext = createContext();
 
-export default function CoinBalanceCard({showHistory}) {
+export default function CoinBalanceCard({showHistory,user_data}) {
     const [open, setOpen] = useState(false)
     const [modalIsOpen, setIsOpen] = useState(false);
     const customStyles = {
@@ -43,10 +42,14 @@ export default function CoinBalanceCard({showHistory}) {
         setOpen(false)
     }
 
+    useEffect(()=>{
+        
+    },[])
+
     return (
         <>
             <div className='coinBalanceHeading'>
-                Coin Balance:
+                Your Coin Balance:
                 <div className='history' onClick={() => showHistory()}>
                     <img style={{marginRight:"5px",height:"10px"}} src={historyPic} alt="" /> History
                 </div>
@@ -54,30 +57,38 @@ export default function CoinBalanceCard({showHistory}) {
             <div className="coinBalanceCard">
                 <img src={pic} className="coinPic"  alt="" />
                 <div className='coinBalanceRightSection'>
-                    <div className='headerCard'>
-                        Coin Balance
-                    </div>
-                    <div className='coinBalanceDiv'>
-                        {/* <img src={coinPic} alt="" srcset="" /> */}
-                        <div className='coinBalance'>
-                            1600
+                    <div style={{flex:1}}>
+                        <div className='headerCard'>
+                            Coin Balance
                         </div>
-                        <div className='rupee'>
-                        1 Coin = &#8377;1
+                        <div className='coinBalanceDiv'>
+                            <div className='coinBalance'>
+                                 {user_data.balance}
+                            </div>
+                        </div>
+                    </div>
+                    <div style={{flex:1}} className="earnings-div">
+                        <div className='headerCard'>
+                            Lifetime Earnings
+                        </div>
+                        <div className='coinBalanceDiv'>
+                            <div className='coinBalance'>
+                                {user_data.lifetime}
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div style={{display:"flex", alignItems:"baseline"}}>
-                <span className='earnings'>Lifetime earnings:</span><span className="amount">&#8377;1000.00</span>
+            <div className="lifetime-earnings">
+                <span className='earnings'>Lifetime earnings:</span><span className="amount">&#8377;{user_data.lifetime}</span>
             </div>
-            <div style={{ margin: "1.875rem 2.4375rem 0 2.5rem" }}>
+            <div className='button-container'>
                 <button id='redeemBtn' onClick={window.innerWidth > 480 ? openDesktopModal : openMobileModal} className='redeem' type="button">
                     {/* () => setOpen(true) */}
                     Redeem Now
                 </button>
                 <BottomSheet open={open} onDismiss={closeMobileModal}>
-                    <RedeemPopup />
+                    <RedeemPopup user_data={user_data} />
                 </BottomSheet>
                 <Modal
                     // isOpen={modalIsOpen}
@@ -96,7 +107,7 @@ export default function CoinBalanceCard({showHistory}) {
                     // ariaHideApp={false}
                     // contentLabel="Desktop Modal"
                 >
-                    <RedeemPopup />
+                    <RedeemPopup user_data={user_data}/>
                 </Modal>
             </div>
             {/* <div id="myModal" class="modal">
@@ -105,21 +116,6 @@ export default function CoinBalanceCard({showHistory}) {
                         <p>Some text in the Modal..</p>
                     </div>
                 </div> */}
-            <div className="dash">
-            </div>
-            <div className="coinsOnWayFlex">
-                <img src={giftPic} className="giftPic" alt=""  />
-                <div className='coinsOnWay'>
-                    <span className="onWayCoinsNumber">200</span>&nbsp;coins are on the way
-                    {/* <Chip label="200" classes={onWayCoinsNumber} component="a" href="#basic-chip" /> &nbsp;coins are on the way */}
-                </div>
-            </div>
-            <div className="savedMoneyCard">
-                <img src={discountIcon} className='discountPic' alt="" />
-                <div className='savedMoney'>
-                    You have saved &nbsp; <span className="onWayCoinsPriceNumber"> &#8377;1000.00 </span> &nbsp; so far
-                </div>
-            </div>
         </>
     )
 }

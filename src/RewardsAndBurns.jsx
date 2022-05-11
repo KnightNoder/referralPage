@@ -1,39 +1,68 @@
-import CoinHistoryOrderCard from './CoinHistoryOrderCard';
 import CoinBurnHistoryOrderCard from './CoinBurnHistoryOrderCard';
+import CoinsOnYourWayCard from './CoinsOnYourWayCard'
+import EarningsCard from './EarningsCard';
+import SpendingsCard from './SpendingsCard';
+import VouchersCard from './VouchersCard';
 import './css/RewardsAndBurns.css'
 import './css/coinHistoryCard.css'
 import { useState } from 'react';
-const RewardsAndBurns = () => {
+import React, {Component} from 'react'
+const RewardsAndBurns = ({user_data}) => {
     const [trackHistory,setTrackHistory] = useState(false)
     const [buttonsState,setButtonState] = useState({
-        rewardsButtonColor: "white",
-        burnsButtonColor:"#ebebeb",
-        rewardsButtonTextColor:"red",
-        burnsButtonTextColor:"black"
+        earningsButtonColor: "white",
+        earningsButtonTextColor:"#FE8276",
+        earnings: true,
+        spendsButtonColor:"#ebebeb",
+        spendsButtonTextColor:"black",
+        spends: false,
+        vouchersButtonColor: "#ebebeb",
+        vouchersButtonTextColor:"black",
+        vouchers: false
+
     })
-    const showRewards = () =>{
-        setTrackHistory(false);
-        setButtonState({
-            rewardsButtonColor: "white ",
-            burnsButtonColor:"#ebebeb",
-            rewardsButtonTextColor:"red",
-            burnsButtonTextColor:"black"
-        })
-        console.log(buttonsState,'buttonState')
-    }
-    const showBurns = () => {
-        setTrackHistory(true);
-        setButtonState({
-            rewardsButtonColor: "#ebebeb",
-            burnsButtonColor:"white",
-            rewardsButtonTextColor:"black",
-            burnsButtonTextColor:"red"
 
+    const showEarnings = () =>{
+        setButtonState({
+            earningsButtonColor: "white",
+            earningsButtonTextColor:"#FE8276",
+            earnings: true,
+            spendsButtonColor:"#ebebeb",
+            spendsButtonTextColor:"black",
+            spends: false,
+            vouchersButtonColor: "#ebebeb",
+            vouchersButtonTextColor:"black",
+            vouchers: false
         })
-        console.log(buttonsState,'buttonState')
+    }
+    const showSpending = () => {
+        setButtonState({
+            earningsButtonColor: "#ebebeb",
+            earningsButtonTextColor:"black",
+            earnings: false,
+            spendsButtonColor:"white",
+            spendsButtonTextColor:"#FE8276",
+            spends: true,
+            vouchersButtonColor: "#ebebeb",
+            vouchersButtonTextColor:"black",
+            vouchers: false
+        })
     }
 
-    const {rewardsButtonColor,burnsButtonColor,rewardsButtonTextColor,burnsButtonTextColor } = buttonsState;
+    const showVouchers = () => {
+        setButtonState({
+            earningsButtonColor: "#ebebeb",
+            earningsButtonTextColor:"black",
+            earnings: false,
+            spendsButtonColor:"#ebebeb",
+            spendsButtonTextColor:"black",
+            spends: false,
+            vouchersButtonColor: "white",
+            vouchersButtonTextColor:"#FE8276",
+            vouchers: true
+        })
+    }
+
   return (
     <>
         <div className='rewardsAndBurnsContainer'>
@@ -41,14 +70,17 @@ const RewardsAndBurns = () => {
                 History
             </div>
             <div className='toggleButtons'>
-                <button className='rewards' style={{backgroundColor: rewardsButtonColor, color:rewardsButtonTextColor }} onClick={showRewards}> 
-                    Rewards
+                <button className='rewards' style={{backgroundColor: buttonsState.earningsButtonColor, color: buttonsState.earningsButtonTextColor }} onClick={showEarnings}> 
+                    Earnings
                 </button>
-                <button className='burns' style={{backgroundColor: burnsButtonColor, color: burnsButtonTextColor}} onClick={showBurns}>
-                    Burns
+                <button className='rewards' style={{backgroundColor: buttonsState.spendsButtonColor, color: buttonsState.spendsButtonTextColor}} onClick={showSpending}>
+                    Spends
+                </button>
+                <button className='rewards' style={{backgroundColor: buttonsState.vouchersButtonColor, color: buttonsState.vouchersButtonTextColor}} onClick={showVouchers}>
+                    My Vouchers
                 </button>
             </div>  
-            <div className='coinsOrderCard' style={{marginTop:"25px"}}>
+            {/* <div className='coinsOrderCard' style={{marginTop:"25px"}}>
                 {
                 trackHistory ? <CoinHistoryOrderCard /> : null
                 }
@@ -73,7 +105,16 @@ const RewardsAndBurns = () => {
                 {
                 !trackHistory? <CoinBurnHistoryOrderCard/> :  null
                 }
-            </div>
+            </div> */}
+                {buttonsState.earnings && user_data.rewards_list.map((item,key)=> (
+                    <EarningsCard key={key} item={item} />
+                ))}
+                {buttonsState.spends && user_data.rewards_list.map((item,key)=> (
+                    <SpendingsCard key={key} item={item} />
+                ))}
+                {buttonsState.vouchers && user_data.rewards_list.map((item,key)=> (
+                    <VouchersCard key={key} item={item} />
+            ))}
         </div>
     </>
   )

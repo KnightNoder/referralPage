@@ -1,19 +1,37 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+@font-face {
+  font-family: harmonia-reg;
+  src: url(../fonts/HarmoniaSansProCyr-Regular.ttf);
+}
+
+
+@font-face {
+  font-family: harmonia-bold;
+  src: url(../fonts/HarmoniaSansProCyr-Bold.ttf);
+}
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Roboto";
+  font-family: harmonia-reg;
 }
 
-.mainContainer {
-  margin-top: 68px;
-  margin-left: 25rem;
-  margin-right: 25rem;
+div:empty{
+  display: block;
 }
 
-@media only screen and (max-width: 1000px) {
+a:not([href]) {
+  cursor: pointer;
+}
+
+.react-responsive-modal-modal{
+  height: 70%;
+  width: 30%;
+  border-radius: 16px;
+}
+
+@media only screen and (min-width: 1000px) {
   html {
     font-size: 13px;
   }
@@ -32,6 +50,20 @@
 }
 
 @media only screen and (min-width: 480px) {
+
+.coinBalanceCard{
+  height: 7.25rem;
+}
+
+.refer-friend-container{
+  flex:4 
+}
+
+.mainContainer{
+  margin-left: 13%;
+  margin-right: 13%;
+}
+
   .coinBalanceHeading {
     display: none;
   }
@@ -42,9 +74,6 @@
   .sharePic {
     height: 22px;
     width: 22px;
-    margin-top: 25px;
-    margin-left: 30px;
-    margin-right: 10px;
   }
 
   .referFriend {
@@ -88,15 +117,17 @@
     font-size: 8px;
   }
 
-  .mainContainer {
-    margin-left: 50px;
-    margin-right: 50px;
+  .copyCouponDiv{
+    display: none;
+  }
+
+  .referFriend{
+    margin-right: 5%;
   }
 
   .walletCardsContainer {
     flex-direction: column-reverse;
     display: flex;
-    height: 552px;
   }
 
   .coinsHistoryCard {
@@ -114,6 +145,7 @@
     width: 100%;
   }
 
+  
   .walletCardImage,
   .coinBalanceCardContainer {
     margin: 5px 0px 5px 0px;
@@ -134,16 +166,9 @@
     font-size: 20px;
   }
 
-  .coinBalanceRightSection {
-    width: 100%;
-  }
-  .referContainer {
-    padding-bottom: 20px;
-  }
 
   .howItWorksImageContainer {
     box-shadow: none;
-    height: 300px;
   }
 
   .howItWorksSectionCard {
@@ -230,15 +255,13 @@
 
   .sharePic {
     height: 20px;
+    width: 20px;
     /* border: solid 1px; */
-    margin-top: 10px;
-    margin-left: 10px;
   }
 
   .referText {
     /* border: solid 1px; */
-    margin-left: 5px;
-    font-size: 20px;
+    margin-top: 6%;
   }
 
   .onWayCardBody {
@@ -259,5 +282,18 @@
   }
   .howItWorksImageContainer {
     box-shadow: none;
+  }
+
+  .mainContainer{
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  .refer-friend-container{
+    flex:6
+  }
+
+  .coinBalanceCard{
+    height: 6.25rem;
   }
 }

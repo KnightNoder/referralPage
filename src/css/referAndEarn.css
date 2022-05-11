@@ -1,38 +1,79 @@
 .referContainer {
-  background-color: #fff5ef;
-  border-radius: 2rem;
   overflow: auto;
-  margin-top: 0px;
-  z-index: 0;
-  position: relative;
+  background: linear-gradient(-90deg, #1469B3 -1.36%, #222E54 77.79%);
+  border-radius: 16px;
+  font-family: Harmonia-bold;
 }
 
 .topDivHeading {
-  font-size: 2.25rem;
-  font-style: normal;
+  font-size: 32px;
   font-weight: 700;
-  margin-top: 2.125rem;
-  margin-left: 3.3125rem;
-  height: 2.625rem;
-  color: #223263;
+  margin-left: 4%;
+  color: #FFFFFF;
   max-width: 40%;
+  margin-top: 3%;
+  letter-spacing: 1px;
 }
 
 .bottomDivHeading {
-  font-style: normal;
-  font-weight: normal;
-  font-size: 1.5rem;
-  color: #726868;
-  line-height: 2rem;
-  margin-left: 3.125rem;
-  margin-top: 1rem;
-  margin-bottom: 2rem;
-  height: 2.5rem;
-  max-width: 70%;
+  font-weight: 200;
+  font-size: 20px;
+  color: #FFFFFF;
+  line-height: 26px;
+  margin-left: 4%;
+  margin-top: 1%;
+  margin-bottom: 3%;
+  max-width: 80%;
 }
 
-.coins {
-  font-weight: 1000;
-  font-size: 1.5rem;
-  color: #223263;
+.refer-bold{
+  /* font-family: harmonia-bold; */
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+
+@media only screen and (max-width: 480px) {
+  .referContainer{
+
+  }
+
+  .topDivHeading{
+    font-size: 14px;
+    margin-top: 5%;
+  }
+
+  .bottomDivHeading{
+    font-size: 10px;
+    line-height: 12px;
+    max-width: 60%;
+    margin-bottom: 7%;
+  }
+
+  .refer-bold{
+    font-weight: 600;
+  }
+
+  .bottom-div-content{
+    display: inline-block
+  }
+  
+  #top{
+    width: 80%;
+  }
+
+  .bottomDivHeading{
+    line-height: 13px;
+  }
+
+}
+
+@media only screen and (min-width: 480px){
+  .topDivHeading{
+  }
+
+  .bottom-div-content{
+    display: inline-block;
+  }
+
 }

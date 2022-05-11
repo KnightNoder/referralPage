@@ -1,8 +1,9 @@
-import CoinHistoryOrderCard from './CoinHistoryOrderCard';
+import CoinHistoryOrderCard from './EarningsCard';
 import Container from '@mui/material/Container';
 import './css/coinHistoryCard.css'
+import React, {Component} from 'react'
 
-const CoinHistoryPopUp = () => {
+const CoinHistoryPopUp = ({item}) => {
   return (
     <>
         <div className='popUpContainer'>
@@ -10,9 +11,9 @@ const CoinHistoryPopUp = () => {
                 Coin History
             </div>
             <div className='coinsOrderCard'>
-                <CoinHistoryOrderCard />
-                <CoinHistoryOrderCard />
-                <CoinHistoryOrderCard />
+               {item.rewards_list.map((item,key)=> (
+                 <CoinHistoryOrderCard key={key} item={item} />
+                ))}
             </div>
         </div>
     </>

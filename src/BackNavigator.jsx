@@ -1,5 +1,7 @@
 import pic from './images/back2.png'
+import React, {Component} from 'react'
 import './css/BackNavigator.css'
+
 const BackNavigator = ({hideHistory}) => {
   return (
     <>  

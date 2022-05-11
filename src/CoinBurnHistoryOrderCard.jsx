@@ -1,3 +1,4 @@
+import React, {Component} from 'react'
 import './css/coinHistoryOrderCard.css'
 import pic from './images/fire.png';
 import calenderPic from './images/calender.png';

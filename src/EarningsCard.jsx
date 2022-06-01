@@ -16,7 +16,7 @@ export default function EarningsCard({item}) {
                 <div className='historyContentCard'>
                     <div className='historyContent'>
                         <div className='earn-record'>
-                            Earnt <span className='coins'>{item.value}</span>  referral order#{item.order}
+                            Earned <span className='coins'>{item.value} Cash credits</span>  on referral order
                         </div>
                         <div className='earn-image'>
                             <img src={coinPic} className='coin-pic' alt="" />

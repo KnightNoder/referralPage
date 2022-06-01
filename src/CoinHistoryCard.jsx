@@ -105,15 +105,15 @@ export default function CoinHistoryCard({user_data}) {
                             My Vouchers
                         </button>
                     </div>
-                    { buttonsState.spends && <CoinsOnYourWayCard coins_on_way={user_data.coins_on_way} /> }
+                    { buttonsState.earnings && <CoinsOnYourWayCard coins_on_way={user_data.coins_on_way} /> }
                     {buttonsState.earnings && user_data.rewards_list.map((item,key)=> (
                         <EarningsCard key={key} item={item} />
-                    ))}
+                        ))}
                     {buttonsState.spends && user_data.rewards_list.map((item,key)=> (
                         <SpendingsCard key={key} item={item} />
                     ))}
                     {buttonsState.vouchers && user_data.rewards_list.map((item,key)=> (
-                        <VouchersCard key={key} item={item} />
+                        <VouchersCard key={key} item={item} code="USERNAME1938" />
                     ))}
                     {/* <div className='view-all-link'>
                         <center>

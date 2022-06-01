@@ -17,7 +17,7 @@ export default function ReferAFriend() {
         const getReferralCode = () =>{
             const config = {
                 method: 'post',
-                url : `https://${process.env.REACT_APP_REFERRAL_BASE_URL}/referral/createReferral`,
+                url : `http://${process.env.REACT_APP_REFERRAL_BASE_URL}/referral/createReferral`,
                 headers: { 
                 'Content-Type': 'application/json'
                 },
@@ -28,14 +28,13 @@ export default function ReferAFriend() {
             }).catch((error)=>{
                 console.log(error,'error');
             })
-            config.url= `https://${process.env.REACT_APP_REFERRAL_BASE_URL}/referral/checkBalance`
+            config.url= `http://${process.env.REACT_APP_REFERRAL_BASE_URL}/referral/checkBalance`
             
         }
         getReferralCode();
     },[])
 
     const copyToClipBoard = (obj) => {
-        console.log(obj.target, 'object');
         obj.target.innerHTML = "Copied";
         Set_clicked(true);
         navigator.clipboard.writeText(referral_code)
@@ -49,31 +48,22 @@ export default function ReferAFriend() {
                 <div className="code">
                     <div className="coupon">
                         <div className="couponText">
-                            {referral_code}
+                            {referral_code.toUpperCase()}
                         </div>
-                        <div className='copyCouponDiv tooltip'>
-                            <span className="tooltiptext">Copy to clipboard</span>
+                        <div className='copyCouponDiv'>
                             <button onClick={(e) => copyToClipBoard(e)} className={`copyCoupon ${clicked? "copy-green" : ""}`} type='button'>
-                                {/* <p className='copyCouponText'> */}
-                                    Copy
-                                {/* </p> */}
+                                    Copy Code
                             </button>
                         </div>
                     </div>
                     <div className='refer-friend-container'>
                         <div className="referFriend">
-                        <div className='share-img-div'>
-                            <img src={sharePic} alt="" className='sharePic'  />
-                        </div>
-                        {
-                            !isMobile ? 
-                            <div className="referText" style={{fontSize:"15px"}}>
-                                    Refer Now
-                                </div> : 
-                                <div className="referText">
-                                    Refer A Friend
-                                </div>
-                        }
+                            <div className='share-img-div'>
+                                <img src={sharePic} alt="" className='sharePic'  />
+                            </div>
+                            <div className="referText">
+                                Refer A Friend
+                            </div>
                         </div>
                     </div>
                 </div>

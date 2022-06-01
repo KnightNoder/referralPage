@@ -38,7 +38,8 @@ export default function App() {
   const getEarningsData = async () => {
       const config = {
           method: 'post',
-          url : `https://${process.env.REACT_APP_REFERRAL_BASE_URL}/referral/checkBalance`,
+          mode: 'cors',
+          url : `http://${process.env.REACT_APP_REFERRAL_BASE_URL}/referral/checkBalance`,
           headers: { 
           'Content-Type': 'application/json'
           },
@@ -109,14 +110,15 @@ export default function App() {
   const marginTopVal = screenSize > 480 ? "70px" : "20px"
   return (
     <>
-        {/* <Container fixed className='mainContainer' style={{marginTop:marginTopVal} }> */}
+        {/* <Container fixed className='mainContainer' style={{marginTop:marginTopVal} }> */
+        //    <div className='mobileReferralCode'>
+        //    My Referral Code
+        //  </div>
+        //  <ReferAFriend />
+        }
         <div  className='mainContainer' style={{marginTop:marginTopVal} }>
           {showHistory ? <BackNavigator hideHistory={toggleHistoryFalse} /> : null}
           {!showHistory ? <ReferAndEarn /> : null}
-          <div className='mobileReferralCode'>
-            My Referral Code
-          </div>
-          <ReferAFriend />
           {!showHistory ? <WalletCards user_data={user_data} showHistory={toggleHistoryTrue} /> : null}
           {!showHistory ? <HowItWorksCards user_data={user_data} /> : null}
           {showHistory ? <div className='coinsOnYourWay'><CoinsOnYourWayCard coins_on_way={user_data.coins_on_way} /></div> : null}

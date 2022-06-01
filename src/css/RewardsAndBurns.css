@@ -11,9 +11,10 @@
 .toggleButtons {
   display: flex;
   background: #ebebeb;
-  border-radius: 4px;
+  border-radius: 10px;
   margin-top: 20px;
   margin-bottom: 3%;
+  height: 50px;
 }
 
 .rewards {

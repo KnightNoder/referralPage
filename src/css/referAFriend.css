@@ -1,18 +1,12 @@
 .referAFriendContainer {
-  background-color: white;
-  border-radius: 1rem;
   overflow: auto;
 }
 
 .refer {
-  max-width: 20rem;
-  height: 1.3125rem;
-  margin-left: 3.3125rem;
-  font-weight: bold;
-  font-size: 1.125rem;
-  margin-top: 1.75rem;
-  margin-bottom: 0.8125rem;
-  color: #8a8a8a;
+  margin-left: 4%;
+  font-size: 20px;
+  margin-bottom: 35px;
+  color: #ffffff;
 }
 
 .code {
@@ -34,9 +28,18 @@
   font-style: normal;
   font-weight: normal;
   color: #2fa83b;
-  margin: 1.125rem 0px 1.1875rem 1.75rem;
   display: flex;
+  font-size: 15px;
   align-items: center;
+  font-size: 25px;
+  padding: 0 0 0 5%;
+  flex: 2;
+  height: 40px;
+}
+
+
+.copyCouponDiv{
+  flex: 1.5 1;
 }
 
 .copyCoupon {
@@ -45,30 +48,22 @@
   border: none;
   box-sizing: border-box;
   border-radius: 5px;
-  font-size: 1.5rem;
-  line-height: 1.75rem;
+  font-size: 20px;
   color: #8a8a8a;
   height: 100%;
-  width: 127px;
+  width: 100%;
   float: right;
   cursor: pointer;
-}
-
-.copyCouponDiv{
-  flex:1
 }
 
 .referFriend {
   background-color: #fe8276;
   box-sizing: border-box;
   border-radius: 5px;
-  display: inline-block;
   text-align: center;
   cursor: pointer;
-  display: flex;
   height: 100%;
-  margin-left: 12.5%;
-  margin-right: 20%;
+  display: flex;
 }
 
 .referText {
@@ -77,7 +72,7 @@
   font-size: 2rem;
   color: #ffffff;
   flex: 8;
-  line-height: 3;
+  line-height: 60px;
 }
 
 .sharePic{
@@ -85,8 +80,8 @@
   width: 35%;
   display: block;
   position: relative;
-  top: 50%;
-  left: 100%;
+  top: 54%;
+  left: 80%;
   transform: translate(-50%,-50%);
 }
 
@@ -127,4 +122,75 @@
 .copy-green{
   background: #5F9E71;
   color: white
+}
+
+@media only screen and (max-width: 480px) {
+  .referAFriendContainer {
+    box-sizing: border-box;
+    /* border-radius: 3px; */
+  }
+
+  .couponText {
+    font-size: 15px;
+  }
+
+  .code {
+    flex-direction: column;
+    background: linear-gradient(-90deg, #1469B3 -1.36%, #222E54 77.79%); 
+  }
+
+  .refer {
+    font-size: 15px;
+    margin-bottom: 4%;
+  }
+  
+  .coupon {
+    border: none;
+    margin-left: 4%;
+    background: #FFFFFF;
+    border-radius: 6px;
+    margin-right: 4%;
+    margin-bottom: 4%;
+  }
+
+  .refer-friend-container{
+    flex:6;
+    margin: 0 4% 5% 4%;
+  }
+
+  .referFriend{
+    margin-right: 5%;
+    margin-left: 0px;
+    display: flex;
+  }
+}
+
+
+@media only screen and (min-width: 480px) {
+  .referAFriendContainer {
+    margin-top: 3.5rem;
+    background: linear-gradient(-90deg, #1469B3 -1.36%, #222E54 77.79%);  
+  }
+
+  .code {
+    margin-bottom: 1.875rem;
+    margin-right: 15%;
+  }
+
+  .refer {
+    font-weight: bold;
+  }
+
+  .refer-friend-container{
+    flex:4 
+  }
+
+  .copyCouponDiv{
+    height: 100%
+  }
+
+  
+  .referFriend {
+    margin-left: 4rem;
+  }
 }

@@ -16,7 +16,7 @@ export default function SpendingsCard({item}) {
                 <div className='historyContentCard'>
                     <div className='historyContent'>
                         <div className='spending-text' >
-                            Spent <span className='coins'>{item.value}</span>  on Amazon Voucher code: #{item.order}
+                            Spent <span className='coins'>{item.value} MCash credits</span>  on Amazon Voucher code: #{item.order}
                         </div>
                         <div className='spending-image'> 
                             <img src={coinPic} className='coin-pic' alt="" />

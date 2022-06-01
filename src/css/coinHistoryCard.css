@@ -110,6 +110,11 @@
   cursor: pointer;
 }
 
+.credits{
+  color: #108F57;
+  font-weight: 600;
+}
+
 @media only screen and (max-width: 480px){
   .onWayCard{
     /* display: none; */

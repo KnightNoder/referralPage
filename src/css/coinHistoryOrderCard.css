@@ -48,7 +48,7 @@
     font-size: 16px;
     line-height: .875rem;
     color: #000000;
-    margin-left: 1.4375rem;
+    margin-left: 1%;
     display: flex;
     align-items: center;
 }
@@ -67,6 +67,8 @@
     display: flex;
     align-items: center;
     font-size: 16px;
+    cursor: pointer;
+    width: 100%;
 }
 
 .coupon-description,.coupon-status{
@@ -110,10 +112,11 @@
 .historyInfo{
     display: flex;
     margin-bottom: 2%;
+    margin-top: -15px;
 }
 
 .amazon-coupon{
-    padding: 25px 20px 10px 40px;
+    padding: 17px 20px 10px 40px;
     position: relative;
     font-size: 20px;
     color: #108F57
@@ -121,9 +124,17 @@
 
 .copy-border{
     position: absolute;
-    top: -5%;
+    top: -30%;
     left: 0;
     width: 100%;
+}
+.coins {
+    color: var(--mars-coins)
+}
+
+.copy-green {
+    background: #5F9E71;
+    color: white
 }
 
 @media only screen and (max-width: 480px){
@@ -148,6 +159,7 @@
         display: flex;
         justify-content: center;
     }
+    
     .copy-coupon-button{
         padding: 7px 23px;
         font-size: 12px

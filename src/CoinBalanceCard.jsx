@@ -49,17 +49,17 @@ export default function CoinBalanceCard({showHistory,user_data}) {
     return (
         <>
             <div className='coinBalanceHeading'>
-                Your Coin Balance:
+                MCash Balance:
                 <div className='history' onClick={() => showHistory()}>
                     <img style={{marginRight:"5px",height:"10px"}} src={historyPic} alt="" /> History
                 </div>
             </div>
             <div className="coinBalanceCard">
-                <img src={pic} className="coinPic"  alt="" />
+                <img src="https://cdn.shopify.com/s/files/1/0607/6029/3588/files/new_cash.png?v=1653396179" className="coinPic"  alt="" />
                 <div className='coinBalanceRightSection'>
                     <div style={{flex:1}}>
                         <div className='headerCard'>
-                            Coin Balance
+                            MCash Balance
                         </div>
                         <div className='coinBalanceDiv'>
                             <div className='coinBalance'>

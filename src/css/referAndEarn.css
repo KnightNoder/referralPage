@@ -3,6 +3,7 @@
   background: linear-gradient(-90deg, #1469B3 -1.36%, #222E54 77.79%);
   border-radius: 16px;
   font-family: Harmonia-bold;
+  position: relative;
 }
 
 .topDivHeading {
@@ -32,11 +33,17 @@
   letter-spacing: 1px;
 }
 
+.coupon-image-div {
+  position: absolute;
+}
+
+.coupon-image{
+  width: 100%;
+  height: 100%;
+}
+
 
 @media only screen and (max-width: 480px) {
-  .referContainer{
-
-  }
 
   .topDivHeading{
     font-size: 14px;
@@ -66,14 +73,28 @@
     line-height: 13px;
   }
 
+  .coupon-image-div {
+    height: 100px;
+    width: 100px;
+    right: 5%;
+    top: 5%
+  }
+
 }
 
 @media only screen and (min-width: 480px){
-  .topDivHeading{
+  .topDivHeading {
   }
 
-  .bottom-div-content{
+  .bottom-div-content {
     display: inline-block;
+  }
+
+  .coupon-image-div {
+    height: 200px;
+    width: 220px;
+    right: 5%;
+    top: 5%
   }
 
 }

@@ -5,12 +5,19 @@ import copyPic from './images/copy.png'
 import amazon from './images/amazon.png'
 import calenderPic from './images/calender.png';
 import coinPic from './images/500coin.jpg';
-import { useEffect } from 'react';
+import { useState } from 'react';
 
-export default function VouchersCard({item}) {
+export default function VouchersCard({item,code}) {
     const date = new Date(item.createdAt);
+    const [clicked,Set_clicked] = useState(false);
     const required_date = `${date.getDate()} ${date.toLocaleString('en-US', {month: 'short'})} ${date.getFullYear()} `
-   
+    
+    const copyToClipBoard = (obj) => {
+        const text = document.getElementById('copy-code-text') 
+        text.innerHTML = "Copied";
+        Set_clicked(true);
+        navigator.clipboard.writeText(code)
+    }
     return (
         <>
             <div className='orderCardContainer'>
@@ -19,7 +26,7 @@ export default function VouchersCard({item}) {
                     <div className='historyContent2'>
                         <div className='left-section'>
                             <div className='amazon-coupon'>
-                                USERNAME1938
+                                {code}
                                 <img className='copy-border' src={amazon} alt="" />
                             </div>
                             <div className='coupon-description'>
@@ -31,9 +38,9 @@ export default function VouchersCard({item}) {
                                 <span className='status-dot'></span>  Active
                             </div>
                             <div className='copy-coupon'>
-                                <button className='copy-coupon-button'>
+                                <button className={`copy-coupon-button ${clicked? "copy-green" : ""}`} onClick={(e) => copyToClipBoard(e)}>
                                     <img className='coupon-pic' src={copyPic} alt="" />
-                                    Copy code
+                                    <span id='copy-code-text'>Copy code</span> 
                                 </button>
                             </div>
                         </div>

@@ -10,6 +10,10 @@
   src: url(../fonts/HarmoniaSansProCyr-Bold.ttf);
 }
 
+html {
+  --mars-coins : rgb(254, 130, 118);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -55,10 +59,6 @@ a:not([href]) {
   height: 7.25rem;
 }
 
-.refer-friend-container{
-  flex:4 
-}
-
 .mainContainer{
   margin-left: 13%;
   margin-right: 13%;
@@ -76,26 +76,13 @@ a:not([href]) {
     width: 22px;
   }
 
-  .referFriend {
-    margin-left: 4rem;
-  }
 
   .coupon {
-    border: 0.125rem dashed #c4c4c4;
+    border: 1px solid #c4c4c4;
     margin-left: 3.3125rem;
-  }
-
-  .code {
-    margin-bottom: 1.875rem;
-  }
-
-  .referAFriendContainer {
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    margin-top: 3.5rem;
-  }
-
-  .couponText {
-    font-size: 1.5rem;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
   }
 
   .coinsOnYourWay {
@@ -115,14 +102,6 @@ a:not([href]) {
 @media only screen and (max-width: 480px) {
   html {
     font-size: 8px;
-  }
-
-  .copyCouponDiv{
-    display: none;
-  }
-
-  .referFriend{
-    margin-right: 5%;
   }
 
   .walletCardsContainer {
@@ -176,37 +155,12 @@ a:not([href]) {
     margin-bottom: 0;
   }
 
-  .referAFriendContainer {
-    background: #ffffff;
-    border: 1px dashed #c4c4c4;
-    box-sizing: border-box;
-    border-radius: 3px;
-  }
-
   .livePic {
     height: 20px;
     width: 20px;
   }
   .coinsOnYourWay {
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
-  }
-
-  .refer {
-    display: none;
-  }
-  .coupon {
-    border: none;
-    margin-left: 20px;
-  }
-
-  .couponText {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 15px;
-    line-height: 19px;
-    text-align: center;
-    color: #5f9e71;
-    margin-left: 0px;
   }
 
   .referText {
@@ -218,23 +172,14 @@ a:not([href]) {
     color: #ffffff;
   }
 
-  .code {
-    /* border: solid 1px; */
-    margin-bottom: 5px;
-    margin-top: 5px;
-  }
-
-  .referFriend {
-    margin-left: 0px;
-    display: flex;
-  }
+ 
 
   .mobileReferralCode {
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
     line-height: 16px;
-    color: #8a8a8a;
+    color: #ffffff;
     margin-top: 12px;
     margin-left: 10px;
     margin-bottom: 5px;
@@ -268,18 +213,13 @@ a:not([href]) {
     font-size: 14px;
   }
 
-  .redeem {
-    font-size: 20px;
-    height: 44px;
-  }
-
   .coinsOnWayFlex {
     margin-top: 12px;
   }
 
-  .copyCoupon {
+  /* .copyCoupon {
     display: none;
-  }
+  } */
   .howItWorksImageContainer {
     box-shadow: none;
   }
@@ -287,10 +227,6 @@ a:not([href]) {
   .mainContainer{
     margin-left: 5%;
     margin-right: 5%;
-  }
-
-  .refer-friend-container{
-    flex:6
   }
 
   .coinBalanceCard{
